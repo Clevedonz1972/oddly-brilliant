@@ -1,0 +1,2187 @@
+
+> backend@1.0.0 test
+> jest
+
+  console.log
+    [dotenv@17.2.3] injecting env (5) from .env -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+
+      at _log (node_modules/dotenv/lib/main.js:142:11)
+
+FAIL src/services/submissions/__tests__/SubmissionService.test.ts
+  ● Test suite failed to run
+
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m123[0m:[93m40[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends challengesFindUniqueArgs>(args: SelectSubset<T, challengesFindUniqueArgs<DefaultArgs>>) => Prisma__challengesClient<GetFindResult<$challengesPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m123[0m       mockPrisma.challenges.findUnique.mockResolvedValue(mockChallenge as any);
+    [7m   [0m [91m                                       ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m124[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends proposalsFindFirstArgs>(args?: SelectSubset<T, proposalsFindFirstArgs<DefaultArgs>> | undefined) => Prisma__proposalsClient<GetFindResult<$proposalsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m124[0m       mockPrisma.proposals.findFirst.mockResolvedValue(mockProposal as any);
+    [7m   [0m [91m                                     ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m125[0m:[93m40[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindFirstArgs>(args?: SelectSubset<T, submissionsFindFirstArgs<DefaultArgs>> | undefined) => Prisma__submissionsClient<GetFindResult<...> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m125[0m       mockPrisma.submissions.findFirst.mockResolvedValue(null);
+    [7m   [0m [91m                                       ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m126[0m:[93m37[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsCreateArgs>(args: SelectSubset<T, submissionsCreateArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions>, never, DefaultArgs, PrismaClientOptions>'.
+
+    [7m126[0m       mockPrisma.submissions.create.mockResolvedValue(mockSubmission as any);
+    [7m   [0m [91m                                    ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m151[0m:[93m40[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends challengesFindUniqueArgs>(args: SelectSubset<T, challengesFindUniqueArgs<DefaultArgs>>) => Prisma__challengesClient<GetFindResult<$challengesPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m151[0m       mockPrisma.challenges.findUnique.mockResolvedValue(null);
+    [7m   [0m [91m                                       ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m163[0m:[93m40[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends challengesFindUniqueArgs>(args: SelectSubset<T, challengesFindUniqueArgs<DefaultArgs>>) => Prisma__challengesClient<GetFindResult<$challengesPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m163[0m       mockPrisma.challenges.findUnique.mockResolvedValue(mockChallenge as any);
+    [7m   [0m [91m                                       ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m164[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends proposalsFindFirstArgs>(args?: SelectSubset<T, proposalsFindFirstArgs<DefaultArgs>> | undefined) => Prisma__proposalsClient<GetFindResult<$proposalsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m164[0m       mockPrisma.proposals.findFirst.mockResolvedValue(null);
+    [7m   [0m [91m                                     ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m176[0m:[93m40[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends challengesFindUniqueArgs>(args: SelectSubset<T, challengesFindUniqueArgs<DefaultArgs>>) => Prisma__challengesClient<GetFindResult<$challengesPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m176[0m       mockPrisma.challenges.findUnique.mockResolvedValue(mockChallenge as any);
+    [7m   [0m [91m                                       ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m177[0m:[93m38[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends proposalsFindFirstArgs>(args?: SelectSubset<T, proposalsFindFirstArgs<DefaultArgs>> | undefined) => Prisma__proposalsClient<GetFindResult<$proposalsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m177[0m       mockPrisma.proposals.findFirst.mockResolvedValue(mockProposal as any);
+    [7m   [0m [91m                                     ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m178[0m:[93m40[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindFirstArgs>(args?: SelectSubset<T, submissionsFindFirstArgs<DefaultArgs>> | undefined) => Prisma__submissionsClient<GetFindResult<...> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m178[0m       mockPrisma.submissions.findFirst.mockResolvedValue(mockSubmission as any);
+    [7m   [0m [91m                                       ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m207[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m207[0m       mockPrisma.submissions.findUnique.mockResolvedValue(mockSubmission as any);
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m208[0m:[93m42[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submission_filesCreateArgs>(args: SelectSubset<T, submission_filesCreateArgs<DefaultArgs>>) => Prisma__submission_filesClient<GetFindResult<$submission_filesPayload<DefaultArgs>, T, PrismaClientOptions>, never, DefaultArgs, PrismaClientOptions>'.
+
+    [7m208[0m       mockPrisma.submission_files.create.mockResolvedValue(mockFile as any);
+    [7m   [0m [91m                                         ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m226[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m226[0m       mockPrisma.submissions.findUnique.mockResolvedValue(null);
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m234[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m234[0m       mockPrisma.submissions.findUnique.mockResolvedValue({
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m245[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m245[0m       mockPrisma.submissions.findUnique.mockResolvedValue({
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m263[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m263[0m       mockPrisma.submissions.findUnique.mockResolvedValue(mockSubmission as any);
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m264[0m:[93m37[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsUpdateArgs>(args: SelectSubset<T, submissionsUpdateArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions>, never, DefaultArgs, PrismaClientOptions>'.
+
+    [7m264[0m       mockPrisma.submissions.update.mockResolvedValue(submittedSubmission as any);
+    [7m   [0m [91m                                    ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m284[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m284[0m       mockPrisma.submissions.findUnique.mockResolvedValue({
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m295[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m295[0m       mockPrisma.submissions.findUnique.mockResolvedValue({
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m318[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m318[0m       mockPrisma.submissions.findUnique.mockResolvedValue(submittedSubmission as any);
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m319[0m:[93m37[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsUpdateArgs>(args: SelectSubset<T, submissionsUpdateArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions>, never, DefaultArgs, PrismaClientOptions>'.
+
+    [7m319[0m       mockPrisma.submissions.update.mockResolvedValue(reviewingSubmission as any);
+    [7m   [0m [91m                                    ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m339[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m339[0m       mockPrisma.submissions.findUnique.mockResolvedValue(submittedSubmission as any);
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m347[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m347[0m       mockPrisma.submissions.findUnique.mockResolvedValue({
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m372[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m372[0m       mockPrisma.submissions.findUnique.mockResolvedValue(reviewingSubmission as any);
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m373[0m:[93m37[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsUpdateArgs>(args: SelectSubset<T, submissionsUpdateArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions>, never, DefaultArgs, PrismaClientOptions>'.
+
+    [7m373[0m       mockPrisma.submissions.update.mockResolvedValue(approvedSubmission as any);
+    [7m   [0m [91m                                    ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m394[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m394[0m       mockPrisma.submissions.findUnique.mockResolvedValue(reviewingSubmission as any);
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m416[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m416[0m       mockPrisma.submissions.findUnique.mockResolvedValue(reviewingSubmission as any);
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m417[0m:[93m37[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsUpdateArgs>(args: SelectSubset<T, submissionsUpdateArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions>, never, DefaultArgs, PrismaClientOptions>'.
+
+    [7m417[0m       mockPrisma.submissions.update.mockResolvedValue(rejectedSubmission as any);
+    [7m   [0m [91m                                    ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m438[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m438[0m       mockPrisma.submissions.findUnique.mockResolvedValue(reviewingSubmission as any);
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m460[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m460[0m       mockPrisma.submissions.findUnique.mockResolvedValue(reviewingSubmission as any);
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m461[0m:[93m37[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsUpdateArgs>(args: SelectSubset<T, submissionsUpdateArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions>, never, DefaultArgs, PrismaClientOptions>'.
+
+    [7m461[0m       mockPrisma.submissions.update.mockResolvedValue(revisionRequestedSubmission as any);
+    [7m   [0m [91m                                    ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m482[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m482[0m       mockPrisma.submissions.findUnique.mockResolvedValue(reviewingSubmission as any);
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m492[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m492[0m       mockPrisma.submissions.findUnique.mockResolvedValue(mockSubmission as any);
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m506[0m:[93m41[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindUniqueArgs>(args: SelectSubset<T, submissionsFindUniqueArgs<DefaultArgs>>) => Prisma__submissionsClient<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions> | null, null, DefaultArgs, PrismaClientOptions>'.
+
+    [7m506[0m       mockPrisma.submissions.findUnique.mockResolvedValue(null);
+    [7m   [0m [91m                                        ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m517[0m:[93m39[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindManyArgs>(args?: SelectSubset<T, submissionsFindManyArgs<DefaultArgs>> | undefined) => PrismaPromise<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions>[]>'.
+
+    [7m517[0m       mockPrisma.submissions.findMany.mockResolvedValue(mockSubmissions as any);
+    [7m   [0m [91m                                      ~~~~~~~~~~~~~~~~~[0m
+    [96msrc/services/submissions/__tests__/SubmissionService.test.ts[0m:[93m533[0m:[93m39[0m - [91merror[0m[90m TS2339: [0mProperty 'mockResolvedValue' does not exist on type '<T extends submissionsFindManyArgs>(args?: SelectSubset<T, submissionsFindManyArgs<DefaultArgs>> | undefined) => PrismaPromise<GetFindResult<$submissionsPayload<DefaultArgs>, T, PrismaClientOptions>[]>'.
+
+    [7m533[0m       mockPrisma.submissions.findMany.mockResolvedValue(mockSubmissions as any);
+    [7m   [0m [91m                                      ~~~~~~~~~~~~~~~~~[0m
+
+FAIL src/services/__tests__/auth.service.test.ts (11.202 s)
+  AuthService
+    signup()
+      Success Cases
+        ✕ should create user with hashed password (12 ms)
+        ✕ should return user without password (2 ms)
+        ✕ should generate valid JWT token (2 ms)
+        ✕ should handle optional walletAddress (2 ms)
+        ✕ should handle optional profile data (2 ms)
+      Validation Errors
+        ✕ should reject duplicate email (3 ms)
+        ✓ should reject invalid email format (16 ms)
+        ✓ should reject multiple invalid email formats (5 ms)
+        ✓ should reject weak password (less than 8 characters) (5 ms)
+        ✕ should accept password with exactly 8 characters (6 ms)
+        ✕ should reject duplicate wallet address (4 ms)
+    login()
+      Success Cases
+        ✕ should return token for valid credentials (1 ms)
+        ✕ should return sanitized user object (1 ms)
+        ✕ should verify password correctly (1 ms)
+      Error Cases
+        ✕ should reject wrong password (1 ms)
+        ✕ should reject non-existent email (1 ms)
+        ✕ should reject empty password (1 ms)
+    verifyToken()
+      Success Cases
+        ✓ should decode valid JWT (9 ms)
+        ✓ should return complete payload with timestamps (4 ms)
+      Error Cases
+        ✓ should reject expired token (5 ms)
+        ✓ should reject malformed token (2 ms)
+        ✓ should reject tampered token (4 ms)
+        ✓ should reject empty token (5 ms)
+    getUserById()
+      ✕ should return sanitized user for valid userId
+      ✕ should throw error for non-existent user (1 ms)
+    updateWalletAddress()
+      ✕ should update wallet address successfully
+      ✕ should return sanitized user without password (1 ms)
+      ✕ should reject if wallet address is already taken by another user (1 ms)
+      ✕ should allow user to update their own wallet address (1 ms)
+
+  ● AuthService › signup() › Success Cases › should create user with hashed password
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      66 |       it('should create user with hashed password', async () => {
+      67 |         // Arrange
+    > 68 |         mockPrismaUser.findUnique.mockResolvedValue(null);
+         |                        ^
+      69 |         (bcrypt.hash as jest.Mock).mockResolvedValue('hashed-password');
+      70 |         (jwt.sign as jest.Mock).mockReturnValue('valid-token');
+      71 |         mockPrismaUser.create.mockResolvedValue(mockUser);
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:68:24)
+
+  ● AuthService › signup() › Success Cases › should return user without password
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      88 |       it('should return user without password', async () => {
+      89 |         // Arrange
+    > 90 |         mockPrismaUser.findUnique.mockResolvedValue(null);
+         |                        ^
+      91 |         (bcrypt.hash as jest.Mock).mockResolvedValue('hashed-password');
+      92 |         (jwt.sign as jest.Mock).mockReturnValue('valid-token');
+      93 |         mockPrismaUser.create.mockResolvedValue(mockUser);
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:90:24)
+
+  ● AuthService › signup() › Success Cases › should generate valid JWT token
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      107 |       it('should generate valid JWT token', async () => {
+      108 |         // Arrange
+    > 109 |         mockPrismaUser.findUnique.mockResolvedValue(null);
+          |                        ^
+      110 |         (bcrypt.hash as jest.Mock).mockResolvedValue('hashed-password');
+      111 |         (jwt.sign as jest.Mock).mockReturnValue('valid-jwt-token');
+      112 |         mockPrismaUser.create.mockResolvedValue(mockUser);
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:109:24)
+
+  ● AuthService › signup() › Success Cases › should handle optional walletAddress
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      135 |         const userWithoutWallet = { ...mockUser, walletAddress: null };
+      136 |
+    > 137 |         mockPrismaUser.findUnique.mockResolvedValue(null);
+          |                        ^
+      138 |         (bcrypt.hash as jest.Mock).mockResolvedValue('hashed-password');
+      139 |         (jwt.sign as jest.Mock).mockReturnValue('valid-token');
+      140 |         mockPrismaUser.create.mockResolvedValue(userWithoutWallet);
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:137:24)
+
+  ● AuthService › signup() › Success Cases › should handle optional profile data
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      166 |         };
+      167 |
+    > 168 |         mockPrismaUser.findUnique.mockResolvedValue(null);
+          |                        ^
+      169 |         (bcrypt.hash as jest.Mock).mockResolvedValue('hashed-password');
+      170 |         (jwt.sign as jest.Mock).mockReturnValue('valid-token');
+      171 |         mockPrismaUser.create.mockResolvedValue(userWithProfile);
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:168:24)
+
+  ● AuthService › signup() › Validation Errors › should reject duplicate email
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      189 |       it('should reject duplicate email', async () => {
+      190 |         // Arrange
+    > 191 |         mockPrismaUser.findUnique.mockResolvedValue(mockUser);
+          |                        ^
+      192 |
+      193 |         // Act & Assert
+      194 |         await expect(authService.signup(validSignupData)).rejects.toThrow(ConflictError);
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:191:24)
+
+  ● AuthService › signup() › Validation Errors › should accept password with exactly 8 characters
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      251 |         };
+      252 |
+    > 253 |         mockPrismaUser.findUnique.mockResolvedValue(null);
+          |                        ^
+      254 |         (bcrypt.hash as jest.Mock).mockResolvedValue('hashed-password');
+      255 |         (jwt.sign as jest.Mock).mockReturnValue('valid-token');
+      256 |         mockPrismaUser.create.mockResolvedValue(mockUser);
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:253:24)
+
+  ● AuthService › signup() › Validation Errors › should reject duplicate wallet address
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      268 |         // First call to findUnique (email check) returns null
+      269 |         // Second call to findUnique (wallet check) returns existing user
+    > 270 |         mockPrismaUser.findUnique
+          |                        ^
+      271 |           .mockResolvedValueOnce(null)
+      272 |           .mockResolvedValueOnce(mockUser);
+      273 |
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:270:24)
+
+  ● AuthService › login() › Success Cases › should return token for valid credentials
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      313 |       it('should return token for valid credentials', async () => {
+      314 |         // Arrange
+    > 315 |         mockPrismaUser.findUnique.mockResolvedValue(mockUser);
+          |                        ^
+      316 |         (bcrypt.compare as jest.Mock).mockResolvedValue(true);
+      317 |         (jwt.sign as jest.Mock).mockReturnValue('valid-jwt-token');
+      318 |
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:315:24)
+
+  ● AuthService › login() › Success Cases › should return sanitized user object
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      334 |       it('should return sanitized user object', async () => {
+      335 |         // Arrange
+    > 336 |         mockPrismaUser.findUnique.mockResolvedValue(mockUser);
+          |                        ^
+      337 |         (bcrypt.compare as jest.Mock).mockResolvedValue(true);
+      338 |         (jwt.sign as jest.Mock).mockReturnValue('valid-token');
+      339 |
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:336:24)
+
+  ● AuthService › login() › Success Cases › should verify password correctly
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      352 |       it('should verify password correctly', async () => {
+      353 |         // Arrange
+    > 354 |         mockPrismaUser.findUnique.mockResolvedValue(mockUser);
+          |                        ^
+      355 |         (bcrypt.compare as jest.Mock).mockResolvedValue(true);
+      356 |         (jwt.sign as jest.Mock).mockReturnValue('valid-token');
+      357 |
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:354:24)
+
+  ● AuthService › login() › Error Cases › should reject wrong password
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      370 |       it('should reject wrong password', async () => {
+      371 |         // Arrange
+    > 372 |         mockPrismaUser.findUnique.mockResolvedValue(mockUser);
+          |                        ^
+      373 |         (bcrypt.compare as jest.Mock).mockResolvedValue(false);
+      374 |
+      375 |         // Act & Assert
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:372:24)
+
+  ● AuthService › login() › Error Cases › should reject non-existent email
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      382 |       it('should reject non-existent email', async () => {
+      383 |         // Arrange
+    > 384 |         mockPrismaUser.findUnique.mockResolvedValue(null);
+          |                        ^
+      385 |
+      386 |         // Act & Assert
+      387 |         await expect(authService.login(validLoginData)).rejects.toThrow(AuthenticationError);
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:384:24)
+
+  ● AuthService › login() › Error Cases › should reject empty password
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      399 |           password: '',
+      400 |         };
+    > 401 |         mockPrismaUser.findUnique.mockResolvedValue(mockUser);
+          |                        ^
+      402 |         (bcrypt.compare as jest.Mock).mockResolvedValue(false);
+      403 |
+      404 |         // Act & Assert
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:401:24)
+
+  ● AuthService › getUserById() › should return sanitized user for valid userId
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      517 |     it('should return sanitized user for valid userId', async () => {
+      518 |       // Arrange
+    > 519 |       mockPrismaUser.findUnique.mockResolvedValue(mockUser);
+          |                      ^
+      520 |
+      521 |       // Act
+      522 |       const result = await authService.getUserById('user-123');
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:519:22)
+
+  ● AuthService › getUserById() › should throw error for non-existent user
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      535 |     it('should throw error for non-existent user', async () => {
+      536 |       // Arrange
+    > 537 |       mockPrismaUser.findUnique.mockResolvedValue(null);
+          |                      ^
+      538 |
+      539 |       // Act & Assert
+      540 |       await expect(authService.getUserById('non-existent')).rejects.toThrow(AuthenticationError);
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:537:22)
+
+  ● AuthService › updateWalletAddress() › should update wallet address successfully
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      561 |     it('should update wallet address successfully', async () => {
+      562 |       // Arrange
+    > 563 |       mockPrismaUser.findUnique.mockResolvedValue(null);
+          |                      ^
+      564 |       mockPrismaUser.update.mockResolvedValue({
+      565 |         ...mockUser,
+      566 |         walletAddress: newWalletAddress,
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:563:22)
+
+  ● AuthService › updateWalletAddress() › should return sanitized user without password
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      580 |     it('should return sanitized user without password', async () => {
+      581 |       // Arrange
+    > 582 |       mockPrismaUser.findUnique.mockResolvedValue(null);
+          |                      ^
+      583 |       mockPrismaUser.update.mockResolvedValue({
+      584 |         ...mockUser,
+      585 |         walletAddress: newWalletAddress,
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:582:22)
+
+  ● AuthService › updateWalletAddress() › should reject if wallet address is already taken by another user
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      596 |       // Arrange
+      597 |       const existingUser = { ...mockUser, id: 'different-user' };
+    > 598 |       mockPrismaUser.findUnique.mockResolvedValue(existingUser);
+          |                      ^
+      599 |
+      600 |       // Act & Assert
+      601 |       await expect(
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:598:22)
+
+  ● AuthService › updateWalletAddress() › should allow user to update their own wallet address
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      609 |     it('should allow user to update their own wallet address', async () => {
+      610 |       // Arrange - Same user updating their own wallet
+    > 611 |       mockPrismaUser.findUnique.mockResolvedValue(mockUser);
+          |                      ^
+      612 |       mockPrismaUser.update.mockResolvedValue({
+      613 |         ...mockUser,
+      614 |         walletAddress: newWalletAddress,
+
+      at Object.<anonymous> (src/services/__tests__/auth.service.test.ts:611:22)
+
+FAIL src/services/proposals/__tests__/ProposalService.test.ts (11.221 s)
+  ProposalService
+    create()
+      Success Cases
+        ✕ should create proposal successfully (12 ms)
+        ✕ should emit CREATE_PROPOSAL event (4 ms)
+        ✕ should create proposal without message (2 ms)
+      Validation Errors
+        ✕ should fail if challenge not found (60 ms)
+        ✕ should fail if contributor is sponsor (8 ms)
+        ✕ should fail if challenge not OPEN (7 ms)
+        ✕ should fail if existing PENDING proposal exists (8 ms)
+        ✕ should fail if existing ACCEPTED proposal exists (5 ms)
+    getById()
+      ✕ should return proposal by ID (5 ms)
+      ✕ should return null if proposal not found (4 ms)
+    getByChallenge()
+      ✕ should return all proposals for a challenge (4 ms)
+      ✕ should filter proposals by status (1 ms)
+    getByContributor()
+      ✕ should return all proposals by contributor (2 ms)
+    accept()
+      Success Cases
+        ✕ should accept proposal successfully (2 ms)
+        ✕ should emit ACCEPT_PROPOSAL event (1 ms)
+      Validation Errors
+        ✕ should fail if proposal not found (3 ms)
+        ✕ should fail if not Project Leader (4 ms)
+        ✕ should fail if proposal not PENDING (4 ms)
+        ✕ should fail if challenge is COMPLETED (3 ms)
+    reject()
+      Success Cases
+        ✕ should reject proposal successfully (3 ms)
+        ✕ should emit REJECT_PROPOSAL event (1 ms)
+      Validation Errors
+        ✕ should fail if not Project Leader (3 ms)
+    withdraw()
+      Success Cases
+        ✕ should withdraw proposal successfully (1 ms)
+        ✕ should emit WITHDRAW_PROPOSAL event (1 ms)
+      Validation Errors
+        ✕ should fail if not contributor (5 ms)
+        ✕ should fail if proposal not PENDING (6 ms)
+
+  ● ProposalService › create() › Success Cases › should create proposal successfully
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      33 |   async create(contributorId: string, data: CreateProposalDTO) {
+      34 |     // Validate challenge exists and is OPEN
+    > 35 |     const challenge = await this.prisma.challenges.findUnique({
+         |                                                    ^
+      36 |       where: { id: data.challengeId },
+      37 |       include: {
+      38 |         users_challenges_sponsorIdTousers: {
+
+      at ProposalService.create (src/services/proposals/ProposalService.ts:35:52)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:169:46)
+
+  ● ProposalService › create() › Success Cases › should emit CREATE_PROPOSAL event
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      33 |   async create(contributorId: string, data: CreateProposalDTO) {
+      34 |     // Validate challenge exists and is OPEN
+    > 35 |     const challenge = await this.prisma.challenges.findUnique({
+         |                                                    ^
+      36 |       where: { id: data.challengeId },
+      37 |       include: {
+      38 |         users_challenges_sponsorIdTousers: {
+
+      at ProposalService.create (src/services/proposals/ProposalService.ts:35:52)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:192:31)
+
+  ● ProposalService › create() › Success Cases › should create proposal without message
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      33 |   async create(contributorId: string, data: CreateProposalDTO) {
+      34 |     // Validate challenge exists and is OPEN
+    > 35 |     const challenge = await this.prisma.challenges.findUnique({
+         |                                                    ^
+      36 |       where: { id: data.challengeId },
+      37 |       include: {
+      38 |         users_challenges_sponsorIdTousers: {
+
+      at ProposalService.create (src/services/proposals/ProposalService.ts:35:52)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:219:46)
+
+  ● ProposalService › create() › Validation Errors › should fail if challenge not found
+
+    expect(received).rejects.toThrow(expected)
+
+    Expected constructor: NotFoundError
+    Received constructor: TypeError
+
+    Received message: "Cannot read properties of undefined (reading 'findUnique')"
+
+          33 |   async create(contributorId: string, data: CreateProposalDTO) {
+          34 |     // Validate challenge exists and is OPEN
+        > 35 |     const challenge = await this.prisma.challenges.findUnique({
+             |                                                    ^
+          36 |       where: { id: data.challengeId },
+          37 |       include: {
+          38 |         users_challenges_sponsorIdTousers: {
+
+      at ProposalService.create (src/services/proposals/ProposalService.ts:35:52)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:233:27)
+      at Object.toThrow (node_modules/expect/build/index.js:2155:20)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:234:19)
+
+  ● ProposalService › create() › Validation Errors › should fail if contributor is sponsor
+
+    expect(received).rejects.toThrow(expected)
+
+    Expected constructor: ValidationError
+    Received constructor: TypeError
+
+    Received message: "Cannot read properties of undefined (reading 'findUnique')"
+
+          33 |   async create(contributorId: string, data: CreateProposalDTO) {
+          34 |     // Validate challenge exists and is OPEN
+        > 35 |     const challenge = await this.prisma.challenges.findUnique({
+             |                                                    ^
+          36 |       where: { id: data.challengeId },
+          37 |       include: {
+          38 |         users_challenges_sponsorIdTousers: {
+
+      at ProposalService.create (src/services/proposals/ProposalService.ts:35:52)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:246:27)
+      at Object.toThrow (node_modules/expect/build/index.js:2155:20)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:247:19)
+
+  ● ProposalService › create() › Validation Errors › should fail if challenge not OPEN
+
+    expect(received).rejects.toThrow(expected)
+
+    Expected constructor: ValidationError
+    Received constructor: TypeError
+
+    Received message: "Cannot read properties of undefined (reading 'findUnique')"
+
+          33 |   async create(contributorId: string, data: CreateProposalDTO) {
+          34 |     // Validate challenge exists and is OPEN
+        > 35 |     const challenge = await this.prisma.challenges.findUnique({
+             |                                                    ^
+          36 |       where: { id: data.challengeId },
+          37 |       include: {
+          38 |         users_challenges_sponsorIdTousers: {
+
+      at ProposalService.create (src/services/proposals/ProposalService.ts:35:52)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:260:27)
+      at Object.toThrow (node_modules/expect/build/index.js:2155:20)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:261:19)
+
+  ● ProposalService › create() › Validation Errors › should fail if existing PENDING proposal exists
+
+    expect(received).rejects.toThrow(expected)
+
+    Expected constructor: ConflictError
+    Received constructor: TypeError
+
+    Received message: "Cannot read properties of undefined (reading 'findUnique')"
+
+          33 |   async create(contributorId: string, data: CreateProposalDTO) {
+          34 |     // Validate challenge exists and is OPEN
+        > 35 |     const challenge = await this.prisma.challenges.findUnique({
+             |                                                    ^
+          36 |       where: { id: data.challengeId },
+          37 |       include: {
+          38 |         users_challenges_sponsorIdTousers: {
+
+      at ProposalService.create (src/services/proposals/ProposalService.ts:35:52)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:274:27)
+      at Object.toThrow (node_modules/expect/build/index.js:2155:20)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:275:19)
+
+  ● ProposalService › create() › Validation Errors › should fail if existing ACCEPTED proposal exists
+
+    expect(received).rejects.toThrow(expected)
+
+    Expected constructor: ConflictError
+    Received constructor: TypeError
+
+    Received message: "Cannot read properties of undefined (reading 'findUnique')"
+
+          33 |   async create(contributorId: string, data: CreateProposalDTO) {
+          34 |     // Validate challenge exists and is OPEN
+        > 35 |     const challenge = await this.prisma.challenges.findUnique({
+             |                                                    ^
+          36 |       where: { id: data.challengeId },
+          37 |       include: {
+          38 |         users_challenges_sponsorIdTousers: {
+
+      at ProposalService.create (src/services/proposals/ProposalService.ts:35:52)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:289:27)
+      at Object.toThrow (node_modules/expect/build/index.js:2155:20)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:290:19)
+
+  ● ProposalService › getById() › should return proposal by ID
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      130 |    */
+      131 |   async getById(proposalId: string) {
+    > 132 |     const proposal = await this.prisma.proposals.findUnique({
+          |                                                  ^
+      133 |       where: { id: proposalId },
+      134 |       include: {
+      135 |         challenges: {
+
+      at ProposalService.getById (src/services/proposals/ProposalService.ts:132:50)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:304:44)
+
+  ● ProposalService › getById() › should return null if proposal not found
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      130 |    */
+      131 |   async getById(proposalId: string) {
+    > 132 |     const proposal = await this.prisma.proposals.findUnique({
+          |                                                  ^
+      133 |       where: { id: proposalId },
+      134 |       include: {
+      135 |         challenges: {
+
+      at ProposalService.getById (src/services/proposals/ProposalService.ts:132:50)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:319:44)
+
+  ● ProposalService › getByChallenge() › should return all proposals for a challenge
+
+    TypeError: Cannot read properties of undefined (reading 'findMany')
+
+      170 |     }
+      171 |
+    > 172 |     const proposals = await this.prisma.proposals.findMany({
+          |                                                   ^
+      173 |       where,
+      174 |       orderBy: { createdAt: 'desc' },
+      175 |       include: {
+
+      at ProposalService.getByChallenge (src/services/proposals/ProposalService.ts:172:51)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:333:44)
+
+  ● ProposalService › getByChallenge() › should filter proposals by status
+
+    TypeError: Cannot read properties of undefined (reading 'findMany')
+
+      170 |     }
+      171 |
+    > 172 |     const proposals = await this.prisma.proposals.findMany({
+          |                                                   ^
+      173 |       where,
+      174 |       orderBy: { createdAt: 'desc' },
+      175 |       include: {
+
+      at ProposalService.getByChallenge (src/services/proposals/ProposalService.ts:172:51)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:350:44)
+
+  ● ProposalService › getByContributor() › should return all proposals by contributor
+
+    TypeError: Cannot read properties of undefined (reading 'findMany')
+
+      203 |    */
+      204 |   async getByContributor(contributorId: string) {
+    > 205 |     const proposals = await this.prisma.proposals.findMany({
+          |                                                   ^
+      206 |       where: { contributorId },
+      207 |       orderBy: { createdAt: 'desc' },
+      208 |       include: {
+
+      at ProposalService.getByContributor (src/services/proposals/ProposalService.ts:205:51)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:372:44)
+
+  ● ProposalService › accept() › Success Cases › should accept proposal successfully
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      130 |    */
+      131 |   async getById(proposalId: string) {
+    > 132 |     const proposal = await this.prisma.proposals.findUnique({
+          |                                                  ^
+      133 |       where: { id: proposalId },
+      134 |       include: {
+      135 |         challenges: {
+
+      at ProposalService.getById (src/services/proposals/ProposalService.ts:132:50)
+      at ProposalService.accept (src/services/proposals/ProposalService.ts:240:33)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:405:46)
+
+  ● ProposalService › accept() › Success Cases › should emit ACCEPT_PROPOSAL event
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      130 |    */
+      131 |   async getById(proposalId: string) {
+    > 132 |     const proposal = await this.prisma.proposals.findUnique({
+          |                                                  ^
+      133 |       where: { id: proposalId },
+      134 |       include: {
+      135 |         challenges: {
+
+      at ProposalService.getById (src/services/proposals/ProposalService.ts:132:50)
+      at ProposalService.accept (src/services/proposals/ProposalService.ts:240:33)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:432:31)
+
+  ● ProposalService › accept() › Validation Errors › should fail if proposal not found
+
+    expect(received).rejects.toThrow(expected)
+
+    Expected constructor: NotFoundError
+    Received constructor: TypeError
+
+    Received message: "Cannot read properties of undefined (reading 'findUnique')"
+
+          130 |    */
+          131 |   async getById(proposalId: string) {
+        > 132 |     const proposal = await this.prisma.proposals.findUnique({
+              |                                                  ^
+          133 |       where: { id: proposalId },
+          134 |       include: {
+          135 |         challenges: {
+
+      at ProposalService.getById (src/services/proposals/ProposalService.ts:132:50)
+      at ProposalService.accept (src/services/proposals/ProposalService.ts:240:33)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:456:27)
+      at Object.toThrow (node_modules/expect/build/index.js:2155:20)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:457:19)
+
+  ● ProposalService › accept() › Validation Errors › should fail if not Project Leader
+
+    expect(received).rejects.toThrow(expected)
+
+    Expected constructor: AuthorizationError
+    Received constructor: TypeError
+
+    Received message: "Cannot read properties of undefined (reading 'findUnique')"
+
+          130 |    */
+          131 |   async getById(proposalId: string) {
+        > 132 |     const proposal = await this.prisma.proposals.findUnique({
+              |                                                  ^
+          133 |       where: { id: proposalId },
+          134 |       include: {
+          135 |         challenges: {
+
+      at ProposalService.getById (src/services/proposals/ProposalService.ts:132:50)
+      at ProposalService.accept (src/services/proposals/ProposalService.ts:240:33)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:466:27)
+      at Object.toThrow (node_modules/expect/build/index.js:2155:20)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:467:19)
+
+  ● ProposalService › accept() › Validation Errors › should fail if proposal not PENDING
+
+    expect(received).rejects.toThrow(expected)
+
+    Expected constructor: ValidationError
+    Received constructor: TypeError
+
+    Received message: "Cannot read properties of undefined (reading 'findUnique')"
+
+          130 |    */
+          131 |   async getById(proposalId: string) {
+        > 132 |     const proposal = await this.prisma.proposals.findUnique({
+              |                                                  ^
+          133 |       where: { id: proposalId },
+          134 |       include: {
+          135 |         challenges: {
+
+      at ProposalService.getById (src/services/proposals/ProposalService.ts:132:50)
+      at ProposalService.accept (src/services/proposals/ProposalService.ts:240:33)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:480:27)
+      at Object.toThrow (node_modules/expect/build/index.js:2155:20)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:481:19)
+
+  ● ProposalService › accept() › Validation Errors › should fail if challenge is COMPLETED
+
+    expect(received).rejects.toThrow(expected)
+
+    Expected constructor: ValidationError
+    Received constructor: TypeError
+
+    Received message: "Cannot read properties of undefined (reading 'findUnique')"
+
+          130 |    */
+          131 |   async getById(proposalId: string) {
+        > 132 |     const proposal = await this.prisma.proposals.findUnique({
+              |                                                  ^
+          133 |       where: { id: proposalId },
+          134 |       include: {
+          135 |         challenges: {
+
+      at ProposalService.getById (src/services/proposals/ProposalService.ts:132:50)
+      at ProposalService.accept (src/services/proposals/ProposalService.ts:240:33)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:500:27)
+      at Object.toThrow (node_modules/expect/build/index.js:2155:20)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:501:19)
+
+  ● ProposalService › reject() › Success Cases › should reject proposal successfully
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      130 |    */
+      131 |   async getById(proposalId: string) {
+    > 132 |     const proposal = await this.prisma.proposals.findUnique({
+          |                                                  ^
+      133 |       where: { id: proposalId },
+      134 |       include: {
+      135 |         challenges: {
+
+      at ProposalService.getById (src/services/proposals/ProposalService.ts:132:50)
+      at ProposalService.reject (src/services/proposals/ProposalService.ts:323:33)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:530:46)
+
+  ● ProposalService › reject() › Success Cases › should emit REJECT_PROPOSAL event
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      130 |    */
+      131 |   async getById(proposalId: string) {
+    > 132 |     const proposal = await this.prisma.proposals.findUnique({
+          |                                                  ^
+      133 |       where: { id: proposalId },
+      134 |       include: {
+      135 |         challenges: {
+
+      at ProposalService.getById (src/services/proposals/ProposalService.ts:132:50)
+      at ProposalService.reject (src/services/proposals/ProposalService.ts:323:33)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:548:31)
+
+  ● ProposalService › reject() › Validation Errors › should fail if not Project Leader
+
+    expect(received).rejects.toThrow(expected)
+
+    Expected constructor: AuthorizationError
+    Received constructor: TypeError
+
+    Received message: "Cannot read properties of undefined (reading 'findUnique')"
+
+          130 |    */
+          131 |   async getById(proposalId: string) {
+        > 132 |     const proposal = await this.prisma.proposals.findUnique({
+              |                                                  ^
+          133 |       where: { id: proposalId },
+          134 |       include: {
+          135 |         challenges: {
+
+      at ProposalService.getById (src/services/proposals/ProposalService.ts:132:50)
+      at ProposalService.reject (src/services/proposals/ProposalService.ts:323:33)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:572:27)
+      at Object.toThrow (node_modules/expect/build/index.js:2155:20)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:573:19)
+
+  ● ProposalService › withdraw() › Success Cases › should withdraw proposal successfully
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      130 |    */
+      131 |   async getById(proposalId: string) {
+    > 132 |     const proposal = await this.prisma.proposals.findUnique({
+          |                                                  ^
+      133 |       where: { id: proposalId },
+      134 |       include: {
+      135 |         challenges: {
+
+      at ProposalService.getById (src/services/proposals/ProposalService.ts:132:50)
+      at ProposalService.withdraw (src/services/proposals/ProposalService.ts:401:33)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:595:46)
+
+  ● ProposalService › withdraw() › Success Cases › should emit WITHDRAW_PROPOSAL event
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      130 |    */
+      131 |   async getById(proposalId: string) {
+    > 132 |     const proposal = await this.prisma.proposals.findUnique({
+          |                                                  ^
+      133 |       where: { id: proposalId },
+      134 |       include: {
+      135 |         challenges: {
+
+      at ProposalService.getById (src/services/proposals/ProposalService.ts:132:50)
+      at ProposalService.withdraw (src/services/proposals/ProposalService.ts:401:33)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:608:31)
+
+  ● ProposalService › withdraw() › Validation Errors › should fail if not contributor
+
+    expect(received).rejects.toThrow(expected)
+
+    Expected constructor: AuthorizationError
+    Received constructor: TypeError
+
+    Received message: "Cannot read properties of undefined (reading 'findUnique')"
+
+          130 |    */
+          131 |   async getById(proposalId: string) {
+        > 132 |     const proposal = await this.prisma.proposals.findUnique({
+              |                                                  ^
+          133 |       where: { id: proposalId },
+          134 |       include: {
+          135 |         challenges: {
+
+      at ProposalService.getById (src/services/proposals/ProposalService.ts:132:50)
+      at ProposalService.withdraw (src/services/proposals/ProposalService.ts:401:33)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:632:27)
+      at Object.toThrow (node_modules/expect/build/index.js:2155:20)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:633:19)
+
+  ● ProposalService › withdraw() › Validation Errors › should fail if proposal not PENDING
+
+    expect(received).rejects.toThrow(expected)
+
+    Expected constructor: ValidationError
+    Received constructor: TypeError
+
+    Received message: "Cannot read properties of undefined (reading 'findUnique')"
+
+          130 |    */
+          131 |   async getById(proposalId: string) {
+        > 132 |     const proposal = await this.prisma.proposals.findUnique({
+              |                                                  ^
+          133 |       where: { id: proposalId },
+          134 |       include: {
+          135 |         challenges: {
+
+      at ProposalService.getById (src/services/proposals/ProposalService.ts:132:50)
+      at ProposalService.withdraw (src/services/proposals/ProposalService.ts:401:33)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:646:27)
+      at Object.toThrow (node_modules/expect/build/index.js:2155:20)
+      at Object.<anonymous> (src/services/proposals/__tests__/ProposalService.test.ts:647:19)
+
+FAIL src/services/files/__tests__/FileService.test.ts
+  FileService
+    upload()
+      ✕ should upload new file and create database record (4 ms)
+      ✕ should deduplicate existing files (2 ms)
+      ✕ should calculate SHA256 correctly (2 ms)
+    get()
+      ✕ should retrieve file with metadata (1 ms)
+      ✕ should throw error if file not found (31 ms)
+    verify()
+      ✕ should return true for valid file (1 ms)
+      ✕ should return false for corrupted file (2 ms)
+      ✕ should return false if file not found (3 ms)
+    getByChallenge()
+      ✕ should return files for challenge with owner info (1 ms)
+    delete()
+      ✕ should delete file owned by user (1 ms)
+      ✕ should throw error if user does not own file (4 ms)
+      ✕ should throw error if file not found (4 ms)
+
+  ● FileService › upload() › should upload new file and create database record
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      33 |
+      34 |     // Check for duplicates (dedup)
+    > 35 |     const existing = await this.prisma.file_artifacts.findUnique({
+         |                                                       ^
+      36 |       where: { sha256 },
+      37 |     });
+      38 |
+
+      at FileService.upload (src/services/files/FileService.ts:35:55)
+      at Object.<anonymous> (src/services/files/__tests__/FileService.test.ts:67:40)
+
+  ● FileService › upload() › should deduplicate existing files
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      33 |
+      34 |     // Check for duplicates (dedup)
+    > 35 |     const existing = await this.prisma.file_artifacts.findUnique({
+         |                                                       ^
+      36 |       where: { sha256 },
+      37 |     });
+      38 |
+
+      at FileService.upload (src/services/files/FileService.ts:35:55)
+      at Object.<anonymous> (src/services/files/__tests__/FileService.test.ts:100:40)
+
+  ● FileService › upload() › should calculate SHA256 correctly
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      33 |
+      34 |     // Check for duplicates (dedup)
+    > 35 |     const existing = await this.prisma.file_artifacts.findUnique({
+         |                                                       ^
+      36 |       where: { sha256 },
+      37 |     });
+      38 |
+
+      at FileService.upload (src/services/files/FileService.ts:35:55)
+      at Object.<anonymous> (src/services/files/__tests__/FileService.test.ts:122:25)
+
+  ● FileService › get() › should retrieve file with metadata
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      74 |    */
+      75 |   async get(fileId: string) {
+    > 76 |     const file = await this.prisma.file_artifacts.findUnique({
+         |                                                   ^
+      77 |       where: { id: fileId },
+      78 |     });
+      79 |
+
+      at FileService.get (src/services/files/FileService.ts:76:51)
+      at Object.<anonymous> (src/services/files/__tests__/FileService.test.ts:148:40)
+
+  ● FileService › get() › should throw error if file not found
+
+    expect(received).rejects.toThrow(expected)
+
+    Expected substring: "File not found"
+    Received message:   "Cannot read properties of undefined (reading 'findUnique')"
+
+          74 |    */
+          75 |   async get(fileId: string) {
+        > 76 |     const file = await this.prisma.file_artifacts.findUnique({
+             |                                                   ^
+          77 |       where: { id: fileId },
+          78 |     });
+          79 |
+
+      at FileService.get (src/services/files/FileService.ts:76:51)
+      at Object.<anonymous> (src/services/files/__tests__/FileService.test.ts:157:32)
+      at Object.toThrow (node_modules/expect/build/index.js:2155:20)
+      at Object.<anonymous> (src/services/files/__tests__/FileService.test.ts:157:61)
+
+  ● FileService › verify() › should return true for valid file
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+       96 |    */
+       97 |   async verify(fileId: string): Promise<boolean> {
+    >  98 |     const file = await this.prisma.file_artifacts.findUnique({
+          |                                                   ^
+       99 |       where: { id: fileId },
+      100 |     });
+      101 |
+
+      at FileService.verify (src/services/files/FileService.ts:98:51)
+      at Object.<anonymous> (src/services/files/__tests__/FileService.test.ts:173:40)
+
+  ● FileService › verify() › should return false for corrupted file
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+       96 |    */
+       97 |   async verify(fileId: string): Promise<boolean> {
+    >  98 |     const file = await this.prisma.file_artifacts.findUnique({
+          |                                                   ^
+       99 |       where: { id: fileId },
+      100 |     });
+      101 |
+
+      at FileService.verify (src/services/files/FileService.ts:98:51)
+      at Object.<anonymous> (src/services/files/__tests__/FileService.test.ts:188:40)
+
+  ● FileService › verify() › should return false if file not found
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+       96 |    */
+       97 |   async verify(fileId: string): Promise<boolean> {
+    >  98 |     const file = await this.prisma.file_artifacts.findUnique({
+          |                                                   ^
+       99 |       where: { id: fileId },
+      100 |     });
+      101 |
+
+      at FileService.verify (src/services/files/FileService.ts:98:51)
+      at Object.<anonymous> (src/services/files/__tests__/FileService.test.ts:196:40)
+
+  ● FileService › getByChallenge() › should return files for challenge with owner info
+
+    TypeError: Cannot read properties of undefined (reading 'findMany')
+
+      113 |    */
+      114 |   async getByChallenge(challengeId: string) {
+    > 115 |     return await this.prisma.file_artifacts.findMany({
+          |                                             ^
+      116 |       where: { challengeId },
+      117 |       include: { users: { select: { id: true, email: true, role: true } } },
+      118 |       orderBy: { createdAt: 'desc' },
+
+      at FileService.getByChallenge (src/services/files/FileService.ts:115:45)
+      at Object.<anonymous> (src/services/files/__tests__/FileService.test.ts:219:40)
+
+  ● FileService › delete() › should delete file owned by user
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      134 |    */
+      135 |   async delete(fileId: string, userId: string) {
+    > 136 |     const file = await this.prisma.file_artifacts.findUnique({
+          |                                                   ^
+      137 |       where: { id: fileId },
+      138 |     });
+      139 |
+
+      at FileService.delete (src/services/files/FileService.ts:136:51)
+      at Object.<anonymous> (src/services/files/__tests__/FileService.test.ts:241:31)
+
+  ● FileService › delete() › should throw error if user does not own file
+
+    expect(received).rejects.toThrow(expected)
+
+    Expected substring: "Unauthorized"
+    Received message:   "Cannot read properties of undefined (reading 'findUnique')"
+
+          134 |    */
+          135 |   async delete(fileId: string, userId: string) {
+        > 136 |     const file = await this.prisma.file_artifacts.findUnique({
+              |                                                   ^
+          137 |       where: { id: fileId },
+          138 |     });
+          139 |
+
+      at FileService.delete (src/services/files/FileService.ts:136:51)
+      at Object.<anonymous> (src/services/files/__tests__/FileService.test.ts:258:38)
+      at Object.toThrow (node_modules/expect/build/index.js:2155:20)
+      at Object.<anonymous> (src/services/files/__tests__/FileService.test.ts:258:72)
+
+  ● FileService › delete() › should throw error if file not found
+
+    expect(received).rejects.toThrow(expected)
+
+    Expected substring: "File not found"
+    Received message:   "Cannot read properties of undefined (reading 'findUnique')"
+
+          134 |    */
+          135 |   async delete(fileId: string, userId: string) {
+        > 136 |     const file = await this.prisma.file_artifacts.findUnique({
+              |                                                   ^
+          137 |       where: { id: fileId },
+          138 |     });
+          139 |
+
+      at FileService.delete (src/services/files/FileService.ts:136:51)
+      at Object.<anonymous> (src/services/files/__tests__/FileService.test.ts:264:38)
+      at Object.toThrow (node_modules/expect/build/index.js:2155:20)
+      at Object.<anonymous> (src/services/files/__tests__/FileService.test.ts:264:76)
+
+  console.warn
+    [OpenAIAnalyzer] No API key found - fallback disabled
+
+      18 |     } else {
+      19 |       this.enabled = false;
+    > 20 |       console.warn('[OpenAIAnalyzer] No API key found - fallback disabled');
+         |               ^
+      21 |     }
+      22 |   }
+      23 |
+
+      at new OpenAIAnalyzer (src/services/ai/safety/analyzers/OpenAIAnalyzer.ts:20:15)
+      at new SafetyService (src/services/ai/safety/SafetyService.ts:21:24)
+      at Object.<anonymous> (src/services/ai/safety/__tests__/SafetyService.test.ts:27:15)
+
+  console.warn
+    Failed to load bad-words filter, using basic profanity detection: Jest encountered an unexpected token
+    
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+    
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+    
+    By default "node_modules" folder is ignored by transformers.
+    
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation, specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+    
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+    
+    Details:
+    
+    /home/matt/backend/node_modules/badwords-list/dist/index.js:1
+    export { array } from './array.js';
+    ^^^^^^
+    
+    SyntaxError: Unexpected token 'export'
+        at internalCompileFunction (node:internal/vm:128:18)
+        at compileFunction (node:vm:365:10)
+        at Runtime.createScriptFromCode (/home/matt/backend/node_modules/jest-runtime/build/index.js:1318:40)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1244:35)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at Object.<anonymous> (/home/matt/backend/node_modules/bad-words/dist/badwords.js:5:25)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1268:24)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at Object.<anonymous> (/home/matt/backend/node_modules/bad-words/dist/index.js:4:21)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1268:24)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at /home/matt/backend/src/services/ai/safety/analyzers/LocalAnalyzer.ts:26:28
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at LocalAnalyzer.initializeFilter (/home/matt/backend/src/services/ai/safety/analyzers/LocalAnalyzer.ts:26:28)
+
+      30 |       this.filterInitialized = true;
+      31 |     } catch (error) {
+    > 32 |       console.warn('Failed to load bad-words filter, using basic profanity detection:', error);
+         |               ^
+      33 |       // Fallback: simple profanity detection without bad-words
+      34 |       this.filter = {
+      35 |         isProfane: (text: string) => customProfanityList.some(word => text.toLowerCase().includes(word.toLowerCase())),
+
+      at LocalAnalyzer.initializeFilter (src/services/ai/safety/analyzers/LocalAnalyzer.ts:32:15)
+
+  console.log
+    [SAFETY] Cached result: 36796e7034c417de1f7316130401a431cb618dff6a419a20783f00c7aa7cd1f4
+
+      at SafetyService.setCache (src/services/ai/base/BaseAIService.ts:96:15)
+
+  console.warn
+    [OpenAIAnalyzer] No API key found - fallback disabled
+
+      18 |     } else {
+      19 |       this.enabled = false;
+    > 20 |       console.warn('[OpenAIAnalyzer] No API key found - fallback disabled');
+         |               ^
+      21 |     }
+      22 |   }
+      23 |
+
+      at new OpenAIAnalyzer (src/services/ai/safety/analyzers/OpenAIAnalyzer.ts:20:15)
+      at new SafetyService (src/services/ai/safety/SafetyService.ts:21:24)
+      at Object.<anonymous> (src/services/ai/safety/__tests__/SafetyService.test.ts:27:15)
+
+  console.warn
+    Failed to load bad-words filter, using basic profanity detection: Jest encountered an unexpected token
+    
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+    
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+    
+    By default "node_modules" folder is ignored by transformers.
+    
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation, specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+    
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+    
+    Details:
+    
+    /home/matt/backend/node_modules/badwords-list/dist/index.js:1
+    export { array } from './array.js';
+    ^^^^^^
+    
+    SyntaxError: Unexpected token 'export'
+        at internalCompileFunction (node:internal/vm:128:18)
+        at compileFunction (node:vm:365:10)
+        at Runtime.createScriptFromCode (/home/matt/backend/node_modules/jest-runtime/build/index.js:1318:40)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1244:35)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at Object.<anonymous> (/home/matt/backend/node_modules/bad-words/dist/badwords.js:5:25)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1268:24)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at Object.<anonymous> (/home/matt/backend/node_modules/bad-words/dist/index.js:4:21)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1268:24)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at /home/matt/backend/src/services/ai/safety/analyzers/LocalAnalyzer.ts:26:28
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at LocalAnalyzer.initializeFilter (/home/matt/backend/src/services/ai/safety/analyzers/LocalAnalyzer.ts:26:28)
+
+      30 |       this.filterInitialized = true;
+      31 |     } catch (error) {
+    > 32 |       console.warn('Failed to load bad-words filter, using basic profanity detection:', error);
+         |               ^
+      33 |       // Fallback: simple profanity detection without bad-words
+      34 |       this.filter = {
+      35 |         isProfane: (text: string) => customProfanityList.some(word => text.toLowerCase().includes(word.toLowerCase())),
+
+      at LocalAnalyzer.initializeFilter (src/services/ai/safety/analyzers/LocalAnalyzer.ts:32:15)
+
+  console.log
+    [SAFETY] Cached result: 5be2d1a9bb419592d0639b0131c1dd93d89b6d3fc8316ba6aa483bfc54ba77ff
+
+      at SafetyService.setCache (src/services/ai/base/BaseAIService.ts:96:15)
+
+  console.warn
+    [OpenAIAnalyzer] No API key found - fallback disabled
+
+      18 |     } else {
+      19 |       this.enabled = false;
+    > 20 |       console.warn('[OpenAIAnalyzer] No API key found - fallback disabled');
+         |               ^
+      21 |     }
+      22 |   }
+      23 |
+
+      at new OpenAIAnalyzer (src/services/ai/safety/analyzers/OpenAIAnalyzer.ts:20:15)
+      at new SafetyService (src/services/ai/safety/SafetyService.ts:21:24)
+      at Object.<anonymous> (src/services/ai/safety/__tests__/SafetyService.test.ts:27:15)
+
+  console.warn
+    Failed to load bad-words filter, using basic profanity detection: Jest encountered an unexpected token
+    
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+    
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+    
+    By default "node_modules" folder is ignored by transformers.
+    
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation, specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+    
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+    
+    Details:
+    
+    /home/matt/backend/node_modules/badwords-list/dist/index.js:1
+    export { array } from './array.js';
+    ^^^^^^
+    
+    SyntaxError: Unexpected token 'export'
+        at internalCompileFunction (node:internal/vm:128:18)
+        at compileFunction (node:vm:365:10)
+        at Runtime.createScriptFromCode (/home/matt/backend/node_modules/jest-runtime/build/index.js:1318:40)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1244:35)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at Object.<anonymous> (/home/matt/backend/node_modules/bad-words/dist/badwords.js:5:25)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1268:24)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at Object.<anonymous> (/home/matt/backend/node_modules/bad-words/dist/index.js:4:21)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1268:24)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at /home/matt/backend/src/services/ai/safety/analyzers/LocalAnalyzer.ts:26:28
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at LocalAnalyzer.initializeFilter (/home/matt/backend/src/services/ai/safety/analyzers/LocalAnalyzer.ts:26:28)
+
+      30 |       this.filterInitialized = true;
+      31 |     } catch (error) {
+    > 32 |       console.warn('Failed to load bad-words filter, using basic profanity detection:', error);
+         |               ^
+      33 |       // Fallback: simple profanity detection without bad-words
+      34 |       this.filter = {
+      35 |         isProfane: (text: string) => customProfanityList.some(word => text.toLowerCase().includes(word.toLowerCase())),
+
+      at LocalAnalyzer.initializeFilter (src/services/ai/safety/analyzers/LocalAnalyzer.ts:32:15)
+
+  console.log
+    [SAFETY] Cache hit: ec1d314085c5429deb61c16e22a2f7c47c566e1681d579f2525eca91bd9e16a2
+
+      at SafetyService.checkCache (src/services/ai/base/BaseAIService.ts:62:15)
+
+  console.log
+    [SAFETY] Cache hit: ec1d314085c5429deb61c16e22a2f7c47c566e1681d579f2525eca91bd9e16a2
+
+      at SafetyService.checkCache (src/services/ai/base/BaseAIService.ts:62:15)
+
+  console.warn
+    [OpenAIAnalyzer] No API key found - fallback disabled
+
+      18 |     } else {
+      19 |       this.enabled = false;
+    > 20 |       console.warn('[OpenAIAnalyzer] No API key found - fallback disabled');
+         |               ^
+      21 |     }
+      22 |   }
+      23 |
+
+      at new OpenAIAnalyzer (src/services/ai/safety/analyzers/OpenAIAnalyzer.ts:20:15)
+      at new SafetyService (src/services/ai/safety/SafetyService.ts:21:24)
+      at Object.<anonymous> (src/services/ai/safety/__tests__/SafetyService.test.ts:27:15)
+
+  console.warn
+    Failed to load bad-words filter, using basic profanity detection: Jest encountered an unexpected token
+    
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+    
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+    
+    By default "node_modules" folder is ignored by transformers.
+    
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation, specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+    
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+    
+    Details:
+    
+    /home/matt/backend/node_modules/badwords-list/dist/index.js:1
+    export { array } from './array.js';
+    ^^^^^^
+    
+    SyntaxError: Unexpected token 'export'
+        at internalCompileFunction (node:internal/vm:128:18)
+        at compileFunction (node:vm:365:10)
+        at Runtime.createScriptFromCode (/home/matt/backend/node_modules/jest-runtime/build/index.js:1318:40)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1244:35)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at Object.<anonymous> (/home/matt/backend/node_modules/bad-words/dist/badwords.js:5:25)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1268:24)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at Object.<anonymous> (/home/matt/backend/node_modules/bad-words/dist/index.js:4:21)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1268:24)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at /home/matt/backend/src/services/ai/safety/analyzers/LocalAnalyzer.ts:26:28
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at LocalAnalyzer.initializeFilter (/home/matt/backend/src/services/ai/safety/analyzers/LocalAnalyzer.ts:26:28)
+
+      30 |       this.filterInitialized = true;
+      31 |     } catch (error) {
+    > 32 |       console.warn('Failed to load bad-words filter, using basic profanity detection:', error);
+         |               ^
+      33 |       // Fallback: simple profanity detection without bad-words
+      34 |       this.filter = {
+      35 |         isProfane: (text: string) => customProfanityList.some(word => text.toLowerCase().includes(word.toLowerCase())),
+
+      at LocalAnalyzer.initializeFilter (src/services/ai/safety/analyzers/LocalAnalyzer.ts:32:15)
+
+  console.log
+    [SAFETY] Cached result: ec1d314085c5429deb61c16e22a2f7c47c566e1681d579f2525eca91bd9e16a2
+
+      at SafetyService.setCache (src/services/ai/base/BaseAIService.ts:96:15)
+
+  console.warn
+    [OpenAIAnalyzer] No API key found - fallback disabled
+
+      18 |     } else {
+      19 |       this.enabled = false;
+    > 20 |       console.warn('[OpenAIAnalyzer] No API key found - fallback disabled');
+         |               ^
+      21 |     }
+      22 |   }
+      23 |
+
+      at new OpenAIAnalyzer (src/services/ai/safety/analyzers/OpenAIAnalyzer.ts:20:15)
+      at new SafetyService (src/services/ai/safety/SafetyService.ts:21:24)
+      at Object.<anonymous> (src/services/ai/safety/__tests__/SafetyService.test.ts:27:15)
+
+  console.warn
+    Failed to load bad-words filter, using basic profanity detection: Jest encountered an unexpected token
+    
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+    
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+    
+    By default "node_modules" folder is ignored by transformers.
+    
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation, specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+    
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+    
+    Details:
+    
+    /home/matt/backend/node_modules/badwords-list/dist/index.js:1
+    export { array } from './array.js';
+    ^^^^^^
+    
+    SyntaxError: Unexpected token 'export'
+        at internalCompileFunction (node:internal/vm:128:18)
+        at compileFunction (node:vm:365:10)
+        at Runtime.createScriptFromCode (/home/matt/backend/node_modules/jest-runtime/build/index.js:1318:40)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1244:35)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at Object.<anonymous> (/home/matt/backend/node_modules/bad-words/dist/badwords.js:5:25)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1268:24)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at Object.<anonymous> (/home/matt/backend/node_modules/bad-words/dist/index.js:4:21)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1268:24)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at /home/matt/backend/src/services/ai/safety/analyzers/LocalAnalyzer.ts:26:28
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at LocalAnalyzer.initializeFilter (/home/matt/backend/src/services/ai/safety/analyzers/LocalAnalyzer.ts:26:28)
+
+      30 |       this.filterInitialized = true;
+      31 |     } catch (error) {
+    > 32 |       console.warn('Failed to load bad-words filter, using basic profanity detection:', error);
+         |               ^
+      33 |       // Fallback: simple profanity detection without bad-words
+      34 |       this.filter = {
+      35 |         isProfane: (text: string) => customProfanityList.some(word => text.toLowerCase().includes(word.toLowerCase())),
+
+      at LocalAnalyzer.initializeFilter (src/services/ai/safety/analyzers/LocalAnalyzer.ts:32:15)
+
+  console.log
+    [SAFETY] Cached result: aafff06b050e36dcba6c04dd193b95166c0fed254248c3665eb9816d2c5ab6df
+
+      at SafetyService.setCache (src/services/ai/base/BaseAIService.ts:96:15)
+
+  console.warn
+    [OpenAIAnalyzer] No API key found - fallback disabled
+
+      18 |     } else {
+      19 |       this.enabled = false;
+    > 20 |       console.warn('[OpenAIAnalyzer] No API key found - fallback disabled');
+         |               ^
+      21 |     }
+      22 |   }
+      23 |
+
+      at new OpenAIAnalyzer (src/services/ai/safety/analyzers/OpenAIAnalyzer.ts:20:15)
+      at new SafetyService (src/services/ai/safety/SafetyService.ts:21:24)
+      at Object.<anonymous> (src/services/ai/safety/__tests__/SafetyService.test.ts:27:15)
+
+  console.warn
+    Failed to load bad-words filter, using basic profanity detection: Jest encountered an unexpected token
+    
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+    
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+    
+    By default "node_modules" folder is ignored by transformers.
+    
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation, specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+    
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+    
+    Details:
+    
+    /home/matt/backend/node_modules/badwords-list/dist/index.js:1
+    export { array } from './array.js';
+    ^^^^^^
+    
+    SyntaxError: Unexpected token 'export'
+        at internalCompileFunction (node:internal/vm:128:18)
+        at compileFunction (node:vm:365:10)
+        at Runtime.createScriptFromCode (/home/matt/backend/node_modules/jest-runtime/build/index.js:1318:40)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1244:35)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at Object.<anonymous> (/home/matt/backend/node_modules/bad-words/dist/badwords.js:5:25)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1268:24)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at Object.<anonymous> (/home/matt/backend/node_modules/bad-words/dist/index.js:4:21)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1268:24)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at /home/matt/backend/src/services/ai/safety/analyzers/LocalAnalyzer.ts:26:28
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at LocalAnalyzer.initializeFilter (/home/matt/backend/src/services/ai/safety/analyzers/LocalAnalyzer.ts:26:28)
+
+      30 |       this.filterInitialized = true;
+      31 |     } catch (error) {
+    > 32 |       console.warn('Failed to load bad-words filter, using basic profanity detection:', error);
+         |               ^
+      33 |       // Fallback: simple profanity detection without bad-words
+      34 |       this.filter = {
+      35 |         isProfane: (text: string) => customProfanityList.some(word => text.toLowerCase().includes(word.toLowerCase())),
+
+      at LocalAnalyzer.initializeFilter (src/services/ai/safety/analyzers/LocalAnalyzer.ts:32:15)
+
+  console.log
+    [SAFETY] Cached result: ebca5d3964601480cd79a7a61c4b8bc1b84b3c000fa20c3101f96c8f60113ce9
+
+      at SafetyService.setCache (src/services/ai/base/BaseAIService.ts:96:15)
+
+FAIL src/services/auditor/__tests__/AuditorService.test.ts
+  AuditorService
+    heartbeat()
+      ✕ should return GREEN when all checks pass (3 ms)
+      ✕ should return AMBER when any check returns AMBER (3 ms)
+      ✕ should return RED when any check returns RED (5 ms)
+      ✕ should include challengeId when provided (6 ms)
+    validatePayout()
+      ✕ should pass validation for complete challenge (6 ms)
+      ✕ should fail when challenge not found (7 ms)
+      ✕ should fail when manifest missing (2 ms)
+      ✕ should fail when manifest not signed (1 ms)
+      ✕ should fail when manifest total is not 1.0 (2 ms)
+      ✕ should fail when contributors not KYC verified (1 ms)
+      ✕ should warn when no event trail (1 ms)
+      ✕ should warn when payout not approved by sponsor (1 ms)
+    generateEvidencePack()
+      ✓ should return evidence pack URL (2 ms)
+
+  ● AuditorService › heartbeat() › should return GREEN when all checks pass
+
+    TypeError: Cannot read properties of undefined (reading 'count')
+
+      163 |     if (!challengeId) {
+      164 |       // System-wide check
+    > 165 |       const unverified = await this.prisma.users.count({
+          |                                                  ^
+      166 |         where: { kycStatus: 'PENDING' },
+      167 |       });
+      168 |
+
+      at AuditorService.checkKYCStatus (src/services/auditor/AuditorService.ts:165:50)
+      at AuditorService.heartbeat (src/services/auditor/AuditorService.ts:34:12)
+      at Object.<anonymous> (src/services/auditor/__tests__/AuditorService.test.ts:46:43)
+
+  ● AuditorService › heartbeat() › should return AMBER when any check returns AMBER
+
+    TypeError: Cannot read properties of undefined (reading 'count')
+
+      163 |     if (!challengeId) {
+      164 |       // System-wide check
+    > 165 |       const unverified = await this.prisma.users.count({
+          |                                                  ^
+      166 |         where: { kycStatus: 'PENDING' },
+      167 |       });
+      168 |
+
+      at AuditorService.checkKYCStatus (src/services/auditor/AuditorService.ts:165:50)
+      at AuditorService.heartbeat (src/services/auditor/AuditorService.ts:34:12)
+      at Object.<anonymous> (src/services/auditor/__tests__/AuditorService.test.ts:58:43)
+
+  ● AuditorService › heartbeat() › should return RED when any check returns RED
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      176 |     } else {
+      177 |       // Challenge-specific check
+    > 178 |       const challenge = await this.prisma.challenges.findUnique({
+          |                                                      ^
+      179 |         where: { id: challengeId },
+      180 |         include: {
+      181 |           contributions: {
+
+      at AuditorService.checkKYCStatus (src/services/auditor/AuditorService.ts:178:54)
+      at AuditorService.heartbeat (src/services/auditor/AuditorService.ts:34:12)
+      at Object.<anonymous> (src/services/auditor/__tests__/AuditorService.test.ts:79:43)
+
+  ● AuditorService › heartbeat() › should include challengeId when provided
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      176 |     } else {
+      177 |       // Challenge-specific check
+    > 178 |       const challenge = await this.prisma.challenges.findUnique({
+          |                                                      ^
+      179 |         where: { id: challengeId },
+      180 |         include: {
+      181 |           contributions: {
+
+      at AuditorService.checkKYCStatus (src/services/auditor/AuditorService.ts:178:54)
+      at AuditorService.heartbeat (src/services/auditor/AuditorService.ts:34:12)
+      at Object.<anonymous> (src/services/auditor/__tests__/AuditorService.test.ts:92:43)
+
+  ● AuditorService › validatePayout() › should pass validation for complete challenge
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      57 |     const warnings: string[] = [];
+      58 |
+    > 59 |     const challenge = await this.prisma.challenges.findUnique({
+         |                                                    ^
+      60 |       where: { id: challengeId },
+      61 |       include: {
+      62 |         contributions: {
+
+      at AuditorService.validatePayout (src/services/auditor/AuditorService.ts:59:52)
+      at Object.<anonymous> (src/services/auditor/__tests__/AuditorService.test.ts:121:43)
+
+  ● AuditorService › validatePayout() › should fail when challenge not found
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      57 |     const warnings: string[] = [];
+      58 |
+    > 59 |     const challenge = await this.prisma.challenges.findUnique({
+         |                                                    ^
+      60 |       where: { id: challengeId },
+      61 |       include: {
+      62 |         contributions: {
+
+      at AuditorService.validatePayout (src/services/auditor/AuditorService.ts:59:52)
+      at Object.<anonymous> (src/services/auditor/__tests__/AuditorService.test.ts:130:43)
+
+  ● AuditorService › validatePayout() › should fail when manifest missing
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      57 |     const warnings: string[] = [];
+      58 |
+    > 59 |     const challenge = await this.prisma.challenges.findUnique({
+         |                                                    ^
+      60 |       where: { id: challengeId },
+      61 |       include: {
+      62 |         contributions: {
+
+      at AuditorService.validatePayout (src/services/auditor/AuditorService.ts:59:52)
+      at Object.<anonymous> (src/services/auditor/__tests__/AuditorService.test.ts:144:43)
+
+  ● AuditorService › validatePayout() › should fail when manifest not signed
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      57 |     const warnings: string[] = [];
+      58 |
+    > 59 |     const challenge = await this.prisma.challenges.findUnique({
+         |                                                    ^
+      60 |       where: { id: challengeId },
+      61 |       include: {
+      62 |         contributions: {
+
+      at AuditorService.validatePayout (src/services/auditor/AuditorService.ts:59:52)
+      at Object.<anonymous> (src/services/auditor/__tests__/AuditorService.test.ts:161:43)
+
+  ● AuditorService › validatePayout() › should fail when manifest total is not 1.0
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      57 |     const warnings: string[] = [];
+      58 |
+    > 59 |     const challenge = await this.prisma.challenges.findUnique({
+         |                                                    ^
+      60 |       where: { id: challengeId },
+      61 |       include: {
+      62 |         contributions: {
+
+      at AuditorService.validatePayout (src/services/auditor/AuditorService.ts:59:52)
+      at Object.<anonymous> (src/services/auditor/__tests__/AuditorService.test.ts:178:43)
+
+  ● AuditorService › validatePayout() › should fail when contributors not KYC verified
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      57 |     const warnings: string[] = [];
+      58 |
+    > 59 |     const challenge = await this.prisma.challenges.findUnique({
+         |                                                    ^
+      60 |       where: { id: challengeId },
+      61 |       include: {
+      62 |         contributions: {
+
+      at AuditorService.validatePayout (src/services/auditor/AuditorService.ts:59:52)
+      at Object.<anonymous> (src/services/auditor/__tests__/AuditorService.test.ts:197:43)
+
+  ● AuditorService › validatePayout() › should warn when no event trail
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      57 |     const warnings: string[] = [];
+      58 |
+    > 59 |     const challenge = await this.prisma.challenges.findUnique({
+         |                                                    ^
+      60 |       where: { id: challengeId },
+      61 |       include: {
+      62 |         contributions: {
+
+      at AuditorService.validatePayout (src/services/auditor/AuditorService.ts:59:52)
+      at Object.<anonymous> (src/services/auditor/__tests__/AuditorService.test.ts:222:43)
+
+  ● AuditorService › validatePayout() › should warn when payout not approved by sponsor
+
+    TypeError: Cannot read properties of undefined (reading 'findUnique')
+
+      57 |     const warnings: string[] = [];
+      58 |
+    > 59 |     const challenge = await this.prisma.challenges.findUnique({
+         |                                                    ^
+      60 |       where: { id: challengeId },
+      61 |       include: {
+      62 |         contributions: {
+
+      at AuditorService.validatePayout (src/services/auditor/AuditorService.ts:59:52)
+      at Object.<anonymous> (src/services/auditor/__tests__/AuditorService.test.ts:246:43)
+
+  console.warn
+    [OpenAIAnalyzer] No API key found - fallback disabled
+
+      18 |     } else {
+      19 |       this.enabled = false;
+    > 20 |       console.warn('[OpenAIAnalyzer] No API key found - fallback disabled');
+         |               ^
+      21 |     }
+      22 |   }
+      23 |
+
+      at new OpenAIAnalyzer (src/services/ai/safety/analyzers/OpenAIAnalyzer.ts:20:15)
+      at new SafetyService (src/services/ai/safety/SafetyService.ts:21:24)
+      at Object.<anonymous> (src/services/ai/safety/__tests__/SafetyService.test.ts:27:15)
+
+  console.warn
+    Failed to load bad-words filter, using basic profanity detection: Jest encountered an unexpected token
+    
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+    
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+    
+    By default "node_modules" folder is ignored by transformers.
+    
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation, specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+    
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+    
+    Details:
+    
+    /home/matt/backend/node_modules/badwords-list/dist/index.js:1
+    export { array } from './array.js';
+    ^^^^^^
+    
+    SyntaxError: Unexpected token 'export'
+        at internalCompileFunction (node:internal/vm:128:18)
+        at compileFunction (node:vm:365:10)
+        at Runtime.createScriptFromCode (/home/matt/backend/node_modules/jest-runtime/build/index.js:1318:40)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1244:35)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at Object.<anonymous> (/home/matt/backend/node_modules/bad-words/dist/badwords.js:5:25)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1268:24)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at Object.<anonymous> (/home/matt/backend/node_modules/bad-words/dist/index.js:4:21)
+        at Runtime._execModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:1268:24)
+        at Runtime._loadModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:944:12)
+        at Runtime.requireModule (/home/matt/backend/node_modules/jest-runtime/build/index.js:832:12)
+        at Runtime.requireModuleOrMock (/home/matt/backend/node_modules/jest-runtime/build/index.js:964:21)
+        at /home/matt/backend/src/services/ai/safety/analyzers/LocalAnalyzer.ts:26:28
+        at processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at LocalAnalyzer.initializeFilter (/home/matt/backend/src/services/ai/safety/analyzers/LocalAnalyzer.ts:26:28)
+
+      30 |       this.filterInitialized = true;
+      31 |     } catch (error) {
+    > 32 |       console.warn('Failed to load bad-words filter, using basic profanity detection:', error);
+         |               ^
+      33 |       // Fallback: simple profanity detection without bad-words
+      34 |       this.filter = {
+      35 |         isProfane: (text: string) => customProfanityList.some(word => text.toLowerCase().includes(word.toLowerCase())),
+
+      at LocalAnalyzer.initializeFilter (src/services/ai/safety/analyzers/LocalAnalyzer.ts:32:15)
+
+  console.log
+    [SAFETY] Cached result: b7fd5f4dc91bd9dd228b219e11dc66d72c6026ce20a1ef9c36a55b7b96548bd3
+
+      at SafetyService.setCache (src/services/ai/base/BaseAIService.ts:96:15)
+
+PASS src/services/ai/safety/__tests__/SafetyService.test.ts
+  SafetyService
+    analyzeContent
+      ✓ should NOT flag normal content (301 ms)
+      ✓ should detect spam patterns (77 ms)
+      ✓ should use cache on repeat calls (17 ms)
+      ✓ should store analysis results in database (41 ms)
+      ○ skipped should detect profanity (local)
+      ○ skipped should detect hate speech patterns
+      ○ skipped should detect self-harm indicators
+    moderateAndFlag
+      ✓ should not create incident for safe content (44 ms)
+      ✓ should set correct severity levels (27 ms)
+      ○ skipped should create incident for flagged content
+    violence detection
+      ✓ should detect violence keywords (19 ms)
+
+FAIL src/services/events/__tests__/EventService.test.ts
+  EventService
+    emit()
+      ✕ should create event without snapshot (3 ms)
+      ✕ should create event with snapshot and hash (4 ms)
+      ✕ should include metadata when provided (7 ms)
+    getTrail()
+      ✕ should return events for entity in chronological order (4 ms)
+    getByActor()
+      ✕ should return events by actor with default limit (2 ms)
+      ✕ should respect custom limit (1 ms)
+    getRecent()
+      ✕ should return recent events with actor info (2 ms)
+    verifyHash()
+      ✓ should return true for matching content (2 ms)
+      ✓ should return false for different content (1 ms)
+      ✓ should produce consistent hashes for same content (10 ms)
+
+  ● EventService › emit() › should create event without snapshot
+
+    TypeError: Cannot read properties of undefined (reading 'create')
+
+      24 |       : null;
+      25 |
+    > 26 |     return await this.prisma.events.create({
+         |                                     ^
+      27 |       data: {
+      28 |         id: generateId(),
+      29 |         actorId: params.actorId,
+
+      at EventService.emit (src/services/events/EventService.ts:26:37)
+      at Object.<anonymous> (src/services/events/__tests__/EventService.test.ts:47:41)
+
+  ● EventService › emit() › should create event with snapshot and hash
+
+    TypeError: Cannot read properties of undefined (reading 'create')
+
+      24 |       : null;
+      25 |
+    > 26 |     return await this.prisma.events.create({
+         |                                     ^
+      27 |       data: {
+      28 |         id: generateId(),
+      29 |         actorId: params.actorId,
+
+      at EventService.emit (src/services/events/EventService.ts:26:37)
+      at Object.<anonymous> (src/services/events/__tests__/EventService.test.ts:81:26)
+
+  ● EventService › emit() › should include metadata when provided
+
+    TypeError: Cannot read properties of undefined (reading 'create')
+
+      24 |       : null;
+      25 |
+    > 26 |     return await this.prisma.events.create({
+         |                                     ^
+      27 |       data: {
+      28 |         id: generateId(),
+      29 |         actorId: params.actorId,
+
+      at EventService.emit (src/services/events/EventService.ts:26:37)
+      at Object.<anonymous> (src/services/events/__tests__/EventService.test.ts:108:26)
+
+  ● EventService › getTrail() › should return events for entity in chronological order
+
+    TypeError: Cannot read properties of undefined (reading 'findMany')
+
+      42 |    */
+      43 |   async getTrail(entityType: string, entityId: string) {
+    > 44 |     return await this.prisma.events.findMany({
+         |                                     ^
+      45 |       where: { entityType, entityId },
+      46 |       orderBy: { createdAt: 'asc' },
+      47 |       include: {
+
+      at EventService.getTrail (src/services/events/EventService.ts:44:37)
+      at Object.<anonymous> (src/services/events/__tests__/EventService.test.ts:137:41)
+
+  ● EventService › getByActor() › should return events by actor with default limit
+
+    TypeError: Cannot read properties of undefined (reading 'findMany')
+
+      62 |    */
+      63 |   async getByActor(actorId: string, limit = 100) {
+    > 64 |     return await this.prisma.events.findMany({
+         |                                     ^
+      65 |       where: { actorId },
+      66 |       orderBy: { createdAt: 'desc' },
+      67 |       take: limit,
+
+      at EventService.getByActor (src/services/events/EventService.ts:64:37)
+      at Object.<anonymous> (src/services/events/__tests__/EventService.test.ts:166:41)
+
+  ● EventService › getByActor() › should respect custom limit
+
+    TypeError: Cannot read properties of undefined (reading 'findMany')
+
+      62 |    */
+      63 |   async getByActor(actorId: string, limit = 100) {
+    > 64 |     return await this.prisma.events.findMany({
+         |                                     ^
+      65 |       where: { actorId },
+      66 |       orderBy: { createdAt: 'desc' },
+      67 |       take: limit,
+
+      at EventService.getByActor (src/services/events/EventService.ts:64:37)
+      at Object.<anonymous> (src/services/events/__tests__/EventService.test.ts:180:26)
+
+  ● EventService › getRecent() › should return recent events with actor info
+
+    TypeError: Cannot read properties of undefined (reading 'findMany')
+
+      74 |    */
+      75 |   async getRecent(limit = 50) {
+    > 76 |     return await this.prisma.events.findMany({
+         |                                     ^
+      77 |       take: limit,
+      78 |       orderBy: { createdAt: 'desc' },
+      79 |       include: {
+
+      at EventService.getRecent (src/services/events/EventService.ts:76:37)
+      at Object.<anonymous> (src/services/events/__tests__/EventService.test.ts:203:41)
+
+  console.log
+    [dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+
+      at _log (node_modules/dotenv/lib/main.js:142:11)
+
+  console.log
+    [dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+
+      at _log (node_modules/dotenv/lib/main.js:142:11)
+
+PASS src/controllers/__tests__/auth.controller.test.ts (6.502 s)
+  AuthController
+    POST /api/auth/signup
+      Success Cases
+        ✓ should return 201 with token and user (74 ms)
+        ✓ should accept signup without wallet address (35 ms)
+        ✓ should response match UserResponseDTO type (12 ms)
+      Validation Errors
+        ✓ should return 400 for invalid email (18 ms)
+        ✓ should return 400 for short password (7 ms)
+        ✓ should return 400 for invalid wallet address format (8 ms)
+        ✓ should return 400 for missing required fields (6 ms)
+      Conflict Errors
+        ✓ should return 409 for duplicate email (9 ms)
+        ✓ should return 409 for duplicate wallet address (13 ms)
+    POST /api/auth/login
+      Success Cases
+        ✓ should return 200 with token and user (9 ms)
+        ✓ should call authService.login with correct credentials (8 ms)
+      Error Cases
+        ✓ should return 401 for wrong password (6 ms)
+        ✓ should return 401 for non-existent user (6 ms)
+        ✓ should return 400 for missing email (5 ms)
+        ✓ should return 400 for missing password (6 ms)
+        ✓ should return 400 for invalid email format (5 ms)
+    GET /api/auth/me
+      Success Cases
+        ✓ should return 200 with user for valid token (5 ms)
+        ✓ should not include password hash in response (5 ms)
+      Error Cases
+        ✓ should return 401 without token (6 ms)
+        ✓ should return 401 with invalid token format (4 ms)
+        ✓ should return 401 with malformed token (10 ms)
+        ✓ should return 401 without Bearer prefix (4 ms)
+    PUT /api/auth/wallet
+      Success Cases
+        ✓ should return 200 with updated user (5 ms)
+        ✓ should call updateWalletAddress with correct parameters (7 ms)
+      Error Cases
+        ✓ should return 401 without authentication (6 ms)
+        ✓ should return 400 for invalid wallet address format (6 ms)
+        ✓ should return 400 for missing wallet address (5 ms)
+        ✓ should return 400 for wallet address with wrong length (7 ms)
+        ✓ should return 409 for duplicate wallet address (4 ms)
+
+Test Suites: 6 failed, 2 passed, 8 total
+Tests:       77 failed, 4 skipped, 49 passed, 130 total
+Snapshots:   0 total
+Time:        18.602 s
+Ran all test suites.

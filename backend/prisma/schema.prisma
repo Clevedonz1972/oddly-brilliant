@@ -1,0 +1,419 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ai_cache {
+  id         String   @id
+  service    String
+  inputHash  String   @unique
+  response   Json
+  confidence Decimal? @db.Decimal(3, 2)
+  createdAt  DateTime @default(now())
+  expiresAt  DateTime
+
+  @@index([expiresAt])
+  @@index([service, inputHash])
+}
+
+model challenges {
+  id                                      String                 @id
+  title                                   String
+  description                             String
+  bountyAmount                            Decimal                @db.Decimal(18, 2)
+  status                                  ChallengeStatus        @default(OPEN)
+  sponsorId                               String
+  createdAt                               DateTime               @default(now())
+  updatedAt                               DateTime
+  projectLeaderId                         String?
+  scopeSignedOff                          DateTime?
+  scopingComplete                         Boolean                @default(false)
+  vettedAt                                DateTime?
+  vettedBy                                String?
+  vettingNotes                            String?
+  vettingStatus                           String                 @default("PENDING")
+  users_challenges_projectLeaderIdTousers users?                 @relation("challenges_projectLeaderIdTousers", fields: [projectLeaderId], references: [id])
+  users_challenges_sponsorIdTousers       users                  @relation("challenges_sponsorIdTousers", fields: [sponsorId], references: [id], onDelete: Cascade)
+  users_challenges_vettedByTousers        users?                 @relation("challenges_vettedByTousers", fields: [vettedBy], references: [id])
+  composition_manifests                   composition_manifests?
+  contributions                           contributions[]
+  ethics_audits                           ethics_audits[]
+  evidence_packages                       evidence_packages[]
+  file_artifacts                          file_artifacts[]
+  ir35_assessments                        ir35_assessments[]
+  payments                                payments[]
+  payout_proposals                        payout_proposals[]
+  proposals                               proposals[]
+  safety_incidents                        safety_incidents[]
+  submissions                             submissions[]
+
+  @@index([createdAt])
+  @@index([sponsorId])
+  @@index([status])
+}
+
+model composition_manifests {
+  id             String     @id
+  challengeId    String     @unique
+  leaderId       String
+  entries        Json
+  totalDeclared  Decimal    @db.Decimal(4, 3)
+  signedByLeader Boolean    @default(false)
+  signedAt       DateTime?
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime
+  challenges     challenges @relation(fields: [challengeId], references: [id])
+  users          users      @relation(fields: [leaderId], references: [id])
+
+  @@index([challengeId, signedByLeader])
+}
+
+model contributions {
+  id               String           @id
+  challengeId      String
+  userId           String
+  content          String
+  type             ContributionType
+  tokenValue       Decimal          @db.Decimal(18, 2)
+  blockchainTxHash String?
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime
+  challenges       challenges       @relation(fields: [challengeId], references: [id], onDelete: Cascade)
+  users            users            @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([challengeId])
+  @@index([createdAt])
+  @@index([userId])
+}
+
+model ethics_audits {
+  id              String     @id
+  challengeId     String
+  fairnessScore   Decimal    @db.Decimal(3, 2)
+  giniCoefficient Decimal?   @db.Decimal(4, 3)
+  redFlags        String[]   @default([])
+  yellowFlags     String[]   @default([])
+  greenFlags      String[]   @default([])
+  recommendations Json
+  evidenceLinks   String[]   @default([])
+  createdAt       DateTime   @default(now())
+  challenges      challenges @relation(fields: [challengeId], references: [id])
+
+  @@index([challengeId, createdAt])
+}
+
+model events {
+  id          String   @id
+  actorId     String
+  entityType  String
+  entityId    String
+  action      String
+  contentHash String?
+  metadata    Json?
+  createdAt   DateTime @default(now())
+  users       users    @relation(fields: [actorId], references: [id])
+
+  @@index([actorId, createdAt])
+  @@index([entityType, entityId, createdAt])
+}
+
+model evidence_packages {
+  id                 String     @id
+  challengeId        String
+  packageType        String
+  fileName           String
+  fileSize           Int
+  storageKey         String
+  sha256             String
+  includesEvents     Boolean    @default(false)
+  includesFiles      Boolean    @default(false)
+  includesSignatures Boolean    @default(false)
+  includesAIAnalysis Boolean    @default(false)
+  verificationUrl    String?
+  createdAt          DateTime   @default(now())
+  challenges         challenges @relation(fields: [challengeId], references: [id])
+
+  @@index([challengeId, packageType])
+}
+
+model file_artifacts {
+  id          String      @id
+  ownerId     String
+  challengeId String?
+  filename    String
+  mime        String
+  bytes       Int
+  sha256      String      @unique
+  ipfsCid     String?
+  storageKey  String
+  createdAt   DateTime    @default(now())
+  challenges  challenges? @relation(fields: [challengeId], references: [id])
+  users       users       @relation(fields: [ownerId], references: [id])
+
+  @@index([challengeId, createdAt])
+  @@index([sha256])
+}
+
+model ir35_assessments {
+  id             String      @id
+  userId         String
+  challengeId    String?
+  responses      Json
+  riskLevel      String
+  recommendation String
+  requiresReview Boolean     @default(false)
+  assessedBy     String?
+  assessedAt     DateTime    @default(now())
+  validUntil     DateTime?
+  challenges     challenges? @relation(fields: [challengeId], references: [id])
+  users          users       @relation(fields: [userId], references: [id])
+
+  @@index([riskLevel])
+  @@index([userId, assessedAt])
+}
+
+model payments {
+  id               String        @id
+  challengeId      String
+  userId           String
+  amount           Decimal       @db.Decimal(18, 2)
+  method           PaymentMethod
+  status           PaymentStatus @default(PENDING)
+  blockchainTxHash String?
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime
+  challenges       challenges    @relation(fields: [challengeId], references: [id], onDelete: Cascade)
+  users            users         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([challengeId])
+  @@index([createdAt])
+  @@index([status])
+  @@index([userId])
+}
+
+model payout_proposals {
+  id                String     @id
+  challengeId       String
+  leaderId          String
+  distribution      Json
+  withinTolerance   Boolean    @default(true)
+  toleranceNote     String?
+  signedByLeader    Boolean    @default(false)
+  leaderSignedAt    DateTime?
+  sponsorApproved   Boolean    @default(false)
+  sponsorApprovedAt DateTime?
+  auditStatus       String     @default("PENDING")
+  auditNotes        String?
+  evidencePackUrl   String?
+  createdAt         DateTime   @default(now())
+  challenges        challenges @relation(fields: [challengeId], references: [id])
+  users             users      @relation(fields: [leaderId], references: [id])
+
+  @@index([auditStatus])
+  @@index([challengeId])
+}
+
+model proposals {
+  id                                   String         @id
+  challengeId                          String
+  contributorId                        String
+  message                              String?
+  status                               ProposalStatus @default(PENDING)
+  respondedBy                          String?
+  respondedAt                          DateTime?
+  responseMessage                      String?
+  createdAt                            DateTime       @default(now())
+  updatedAt                            DateTime       @updatedAt
+  challenges                           challenges     @relation(fields: [challengeId], references: [id], onDelete: Cascade)
+  users_proposals_contributorIdTousers users          @relation("proposals_contributorIdTousers", fields: [contributorId], references: [id], onDelete: Cascade)
+  users_proposals_respondedByTousers   users?         @relation("proposals_respondedByTousers", fields: [respondedBy], references: [id])
+  submissions                          submissions[]
+
+  @@index([challengeId])
+  @@index([contributorId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model reputations {
+  id                 String   @id
+  userId             String   @unique
+  asContributor      Int      @default(0)
+  asProjectLeader    Int      @default(0)
+  asSponsor          Int      @default(0)
+  totalProjects      Int      @default(0)
+  successfulProj     Int      @default(0)
+  disputesRaised     Int      @default(0)
+  disputesAgainst    Int      @default(0)
+  contributionPoints Decimal  @default(0) @db.Decimal(10, 2)
+  leadershipPoints   Decimal  @default(0) @db.Decimal(10, 2)
+  stewardshipPoints  Decimal  @default(0) @db.Decimal(10, 2)
+  badges             String[] @default([])
+  lastUpdated        DateTime
+  createdAt          DateTime @default(now())
+  users              users    @relation(fields: [userId], references: [id])
+}
+
+model safety_incidents {
+  id                                       String                      @id
+  challengeId                              String?
+  raisedById                               String
+  status                                   String                      @default("OPEN")
+  category                                 String
+  severity                                 Int
+  description                              String
+  evidenceEventIds                         String[]
+  assignedTo                               String?
+  resolution                               String?
+  createdAt                                DateTime                    @default(now())
+  closedAt                                 DateTime?
+  aiDetected                               Boolean                     @default(false)
+  users_safety_incidents_assignedToTousers users?                      @relation("safety_incidents_assignedToTousers", fields: [assignedTo], references: [id])
+  challenges                               challenges?                 @relation(fields: [challengeId], references: [id])
+  users_safety_incidents_raisedByIdTousers users                       @relation("safety_incidents_raisedByIdTousers", fields: [raisedById], references: [id])
+  safety_moderation_results                safety_moderation_results[]
+
+  @@index([challengeId])
+  @@index([status, severity])
+}
+
+model safety_moderation_results {
+  id               String            @id
+  entityType       String
+  entityId         String
+  overallScore     Decimal           @db.Decimal(3, 2)
+  categories       Json
+  flagged          Boolean           @default(false)
+  autoBlocked      Boolean           @default(false)
+  detectionMethod  String
+  confidence       Decimal           @db.Decimal(3, 2)
+  incidentId       String?
+  createdAt        DateTime          @default(now())
+  safety_incidents safety_incidents? @relation(fields: [incidentId], references: [id])
+
+  @@index([entityType, entityId])
+  @@index([flagged, autoBlocked])
+}
+
+model users {
+  id                                                  String                  @id
+  email                                               String                  @unique
+  passwordHash                                        String
+  walletAddress                                       String?                 @unique
+  profile                                             Json?
+  createdAt                                           DateTime                @default(now())
+  updatedAt                                           DateTime
+  role                                                Role                    @default(USER)
+  kycStatus                                           String                  @default("PENDING")
+  kycVerifiedAt                                       DateTime?
+  challenges_challenges_projectLeaderIdTousers        challenges[]            @relation("challenges_projectLeaderIdTousers")
+  challenges_challenges_sponsorIdTousers              challenges[]            @relation("challenges_sponsorIdTousers")
+  challenges_challenges_vettedByTousers               challenges[]            @relation("challenges_vettedByTousers")
+  composition_manifests                               composition_manifests[]
+  contributions                                       contributions[]
+  events                                              events[]
+  file_artifacts                                      file_artifacts[]
+  ir35_assessments                                    ir35_assessments[]
+  payments                                            payments[]
+  payout_proposals                                    payout_proposals[]
+  proposals_proposals_contributorIdTousers            proposals[]             @relation("proposals_contributorIdTousers")
+  proposals_proposals_respondedByTousers              proposals[]             @relation("proposals_respondedByTousers")
+  reputations                                         reputations?
+  safety_incidents_safety_incidents_assignedToTousers safety_incidents[]      @relation("safety_incidents_assignedToTousers")
+  safety_incidents_safety_incidents_raisedByIdTousers safety_incidents[]      @relation("safety_incidents_raisedByIdTousers")
+  submissions_submissions_contributorIdTousers        submissions[]           @relation("submissions_contributorIdTousers")
+  submissions_submissions_reviewedByTousers           submissions[]           @relation("submissions_reviewedByTousers")
+
+  @@index([email])
+  @@index([walletAddress])
+}
+
+model submissions {
+  id                                     String             @id
+  challengeId                            String
+  contributorId                          String
+  proposalId                             String?
+  title                                  String
+  description                            String
+  status                                 SubmissionStatus   @default(DRAFT)
+  submittedAt                            DateTime?
+  reviewedBy                             String?
+  reviewedAt                             DateTime?
+  reviewNotes                            String?
+  createdAt                              DateTime           @default(now())
+  updatedAt                              DateTime           @updatedAt
+  submission_files                       submission_files[]
+  challenges                             challenges         @relation(fields: [challengeId], references: [id], onDelete: Cascade)
+  users_submissions_contributorIdTousers users              @relation("submissions_contributorIdTousers", fields: [contributorId], references: [id], onDelete: Cascade)
+  proposals                              proposals?         @relation(fields: [proposalId], references: [id])
+  users_submissions_reviewedByTousers    users?             @relation("submissions_reviewedByTousers", fields: [reviewedBy], references: [id])
+
+  @@index([challengeId])
+  @@index([contributorId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model submission_files {
+  id           String      @id
+  submissionId String
+  filename     String
+  originalName String
+  mimetype     String
+  size         Int
+  path         String
+  uploadedAt   DateTime    @default(now())
+  submissions  submissions @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+
+  @@index([submissionId])
+}
+
+enum ChallengeStatus {
+  OPEN
+  IN_PROGRESS
+  COMPLETED
+}
+
+enum ContributionType {
+  CODE
+  DESIGN
+  IDEA
+  RESEARCH
+}
+
+enum PaymentMethod {
+  CRYPTO
+  FIAT
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+}
+
+enum ProposalStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  WITHDRAWN
+}
+
+enum Role {
+  USER
+  ADMIN
+  MODERATOR
+}
+
+enum SubmissionStatus {
+  DRAFT
+  SUBMITTED
+  IN_REVIEW
+  APPROVED
+  REJECTED
+  REVISION_REQUESTED
+}

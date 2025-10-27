@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Read(//home/matt/**)",
+      "Bash(curl:*)",
+      "Bash(netstat:*)",
+      "Bash(ss:*)",
+      "Bash(timeout 5 npm run dev)",
+      "Bash(pkill:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx tsc:*)",
+      "Bash(timeout 10 npm run dev:*)",
+      "Bash(npm test)",
+      "Bash(cat:*)",
+      "Read(//tmp/**)",
+      "Bash(sudo systemctl status:*)",
+      "Bash(PGPASSWORD='Clevedonz1972!' psql:*)",
+      "Bash(python3:*)",
+      "Bash(npx prisma:*)",
+      "Bash(systemctl status:*)",
+      "Bash(timeout 60 npm run build)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
