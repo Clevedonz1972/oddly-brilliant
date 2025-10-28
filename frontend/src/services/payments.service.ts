@@ -1,40 +1,32 @@
 import type { Payment, Contribution } from '../types';
+import { api } from './api';
 
 /**
  * Payments service for managing payment-related API calls
  *
- * Note: Backend doesn't have a dedicated GET /api/payments/my endpoint yet.
- * Payments are currently only returned via the CompleteChallenge response.
- * This service provides utility methods for working with payment data.
+ * Provides access to user payment history, challenge payments, and payment statistics.
+ * Also includes utility methods for working with payment data.
  */
 export const paymentsService = {
   /**
    * Get payments for the current user
    *
-   * TODO: This endpoint doesn't exist yet in backend
-   * For now, this throws an error. Payments must be retrieved from
-   * completed challenges via challengesService.completeChallenge()
-   *
-   * @returns Promise resolving to array of payments
-   * @throws Error indicating endpoint is not implemented
+   * @returns Promise resolving to array of payments with stats
    */
-  async getMyPayments(): Promise<Payment[]> {
-    // Backend endpoint not implemented yet
-    throw new Error('GET /api/payments/my endpoint not implemented in backend. Retrieve payments from completed challenges instead.');
+  async getMyPayments(): Promise<{ payments: Payment[]; stats: { total: number; totalEarnings: number; pendingEarnings: number; failedAmount: number } }> {
+    const response = await api.get<{ success: boolean; data: { payments: Payment[]; stats: any } }>('/payments/my');
+    return response.data.data;
   },
 
   /**
    * Get payments for a specific challenge
    *
-   * Note: Payments are included in the CompleteChallengeResponse
-   * This is a placeholder for future direct payment queries
-   *
+   * @param challengeId - The challenge ID
    * @returns Promise resolving to array of payments
    */
-  async getByChallengeId(): Promise<Payment[]> {
-    // Payments are currently only available via completeChallenge response
-    // This is a placeholder for future implementation
-    return [];
+  async getByChallengeId(challengeId: string): Promise<Payment[]> {
+    const response = await api.get<{ success: boolean; data: Payment[] }>(`/payments/challenge/${challengeId}`);
+    return response.data.data;
   },
 
   /**

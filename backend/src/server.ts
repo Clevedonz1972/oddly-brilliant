@@ -12,6 +12,7 @@ import challengesRoutes from './routes/challenges.routes';
 import contributionsRoutes from './routes/contributions.routes';
 import proposalsRoutes from './routes/proposals.routes';
 import submissionsRoutes from './routes/submissions.routes';
+import paymentsRoutes from './routes/payments.routes';
 import adminRoutes from './routes/admin.routes';
 import filesRoutes from './routes/files.routes';
 
@@ -104,6 +105,7 @@ class Server {
     this.app.use('/api/contributions', contributionsRoutes);
     this.app.use('/api/proposals', proposalsRoutes);
     this.app.use('/api/submissions', submissionsRoutes);
+    this.app.use('/api/payments', paymentsRoutes);
     this.app.use('/api/admin', adminRoutes);
     this.app.use('/api/files', filesRoutes);
 
@@ -121,6 +123,7 @@ class Server {
             contributions: '/api/contributions',
             proposals: '/api/proposals',
             submissions: '/api/submissions',
+            payments: '/api/payments',
             admin: '/api/admin',
             files: '/api/files',
           },
