@@ -202,7 +202,41 @@ export default {
         'gradient-pink': 'linear-gradient(135deg, #ff006e 0%, #ff4757 100%)',
         'gradient-green': 'linear-gradient(135deg, #00ff88 0%, #00d9ff 100%)',
       },
+
+      // Accessibility - Screen reader only class
+      screens: {
+        'reduce-motion': { 'raw': '(prefers-reduced-motion: reduce)' },
+        'high-contrast': { 'raw': '(prefers-contrast: more)' },
+        'forced-colors': { 'raw': '(forced-colors: active)' },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    // High Contrast Mode plugin
+    function({ addUtilities }) {
+      addUtilities({
+        '.sr-only': {
+          position: 'absolute',
+          width: '1px',
+          height: '1px',
+          padding: '0',
+          margin: '-1px',
+          overflow: 'hidden',
+          clip: 'rect(0, 0, 0, 0)',
+          whiteSpace: 'nowrap',
+          borderWidth: '0',
+        },
+        '.sr-only.focus\\:not-sr-only:focus': {
+          position: 'static',
+          width: 'auto',
+          height: 'auto',
+          padding: 'inherit',
+          margin: 'inherit',
+          overflow: 'visible',
+          clip: 'auto',
+          whiteSpace: 'normal',
+        },
+      });
+    },
+  ],
 }
