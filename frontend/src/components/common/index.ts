@@ -35,5 +35,5 @@ export { PageTransition, AnimatedPage } from './PageTransition';
 
 export { SuccessAnimation, useSuccessAnimation } from './SuccessAnimation';
 
-export { Toast, ToastProvider, useToast } from './Toast';
+export { ToastProvider, useToast } from './Toast';
 export type { ToastVariant, ToastPosition } from './Toast';

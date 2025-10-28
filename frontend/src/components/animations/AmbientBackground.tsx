@@ -216,7 +216,7 @@ export const CanvasParticles = ({
     resize();
     window.addEventListener('resize', resize);
 
-    // Particle class
+    // Particle class - canvas is guaranteed non-null at this point
     class Particle {
       x: number;
       y: number;
@@ -226,8 +226,8 @@ export const CanvasParticles = ({
       opacity: number;
 
       constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
+        this.x = Math.random() * canvas!.width;
+        this.y = Math.random() * canvas!.height;
         this.vx = (Math.random() - 0.5) * 0.5;
         this.vy = (Math.random() - 0.5) * 0.5;
         this.size = Math.random() * 2 + 1;
@@ -239,10 +239,10 @@ export const CanvasParticles = ({
         this.y += this.vy;
 
         // Wrap around edges
-        if (this.x < 0) this.x = canvas.width;
-        if (this.x > canvas.width) this.x = 0;
-        if (this.y < 0) this.y = canvas.height;
-        if (this.y > canvas.height) this.y = 0;
+        if (this.x < 0) this.x = canvas!.width;
+        if (this.x > canvas!.width) this.x = 0;
+        if (this.y < 0) this.y = canvas!.height;
+        if (this.y > canvas!.height) this.y = 0;
       }
 
       draw(ctx: CanvasRenderingContext2D) {

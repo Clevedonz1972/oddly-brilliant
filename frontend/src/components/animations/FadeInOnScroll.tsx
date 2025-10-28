@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 export type FadeInDirection = 'up' | 'down' | 'left' | 'right' | 'none';
