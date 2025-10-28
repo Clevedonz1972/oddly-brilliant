@@ -32,10 +32,11 @@ export const VettingQueue = () => {
     try {
       setLoading(true);
       setError(null);
-      const response = await api.get<VettingChallenge[]>('/admin/challenges', {
+      // BUG FIX: Backend returns { success, data } format, access data.data
+      const response = await api.get<{ success: boolean; data: VettingChallenge[] }>('/admin/challenges', {
         params: { vettingStatus: 'PENDING' },
       });
-      setChallenges(response.data);
+      setChallenges(response.data.data || []);
     } catch (err: any) {
       setError(err.message || 'Failed to fetch pending challenges');
       console.error('Vetting queue error:', err);

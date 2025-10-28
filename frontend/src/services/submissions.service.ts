@@ -97,15 +97,17 @@ export const submissionsService = {
    * Get current user's submissions
    */
   async getMySubmissions(): Promise<Submission[]> {
-    const response = await api.get<Submission[]>('/submissions/my');
-    return response.data;
+    // BUG FIX: Backend returns { success, data } format, access data.data
+    const response = await api.get<{ success: boolean; data: Submission[] }>('/submissions/my');
+    return response.data.data || [];
   },
 
   /**
    * Get all submissions for a challenge
    */
   async getByChallengeId(challengeId: string): Promise<Submission[]> {
-    const response = await api.get<Submission[]>(`/challenges/${challengeId}/submissions`);
-    return response.data;
+    // BUG FIX: Backend returns { success, data } format, access data.data
+    const response = await api.get<{ success: boolean; data: Submission[] }>(`/challenges/${challengeId}/submissions`);
+    return response.data.data || [];
   },
 };

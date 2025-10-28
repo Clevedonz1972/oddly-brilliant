@@ -53,9 +53,17 @@ class AdminController {
         orderBy: { createdAt: 'desc' },
       });
 
+      // Format challenges to match frontend expectations (sponsor property instead of Prisma relation name)
+      const formattedChallenges = challenges.map((challenge) => ({
+        ...challenge,
+        sponsor: challenge.users_challenges_sponsorIdTousers,
+        contributionCount: challenge._count.contributions,
+        bountyAmount: challenge.bountyAmount.toNumber(),
+      }));
+
       res.json({
         success: true,
-        data: challenges,
+        data: formattedChallenges,
       });
     } catch (error) {
       next(error);

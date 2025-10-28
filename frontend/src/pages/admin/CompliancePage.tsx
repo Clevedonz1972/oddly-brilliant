@@ -24,9 +24,10 @@ export const CompliancePage = () => {
     const fetchChallenges = async () => {
       try {
         setLoading(true);
-        const response = await api.get<Challenge[]>('/admin/challenges');
+        // BUG FIX: Backend returns { success, data } format, access data.data
+        const response = await api.get<{ success: boolean; data: Challenge[] }>('/admin/challenges');
         // Filter to only show completed challenges
-        const completedChallenges = response.data.filter(
+        const completedChallenges = (response.data.data || []).filter(
           (c) => c.status === 'COMPLETED'
         );
         setChallenges(completedChallenges);
